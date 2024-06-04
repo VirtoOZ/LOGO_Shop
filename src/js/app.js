@@ -9,8 +9,8 @@ import * as flsFunctions from './modules/functions.js'
 // import './files/scroll.js';
 // import './files/dynamic_adapt.js'; 
 // import './files/script.js';
-// import * as flsWebP from './modules/functions.js';
-// flsWebP.isWebp();
+import * as flsWebP from './modules/functions.js';
+flsWebP.isWebp();
 
-import './files/dynamic_adapt.js';
 import './files/script.js';
+import './files/dynamic_adapt.js';
