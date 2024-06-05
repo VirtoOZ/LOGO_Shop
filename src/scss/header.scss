@@ -195,6 +195,7 @@
 		li {
 			// flex элемент
 			flex: 0 0 33.333%;
+			margin: 0px 0px 20px 0px;
 		}
 		@media (max-width: ($md2+px)) {
 			display: block;
@@ -219,18 +220,19 @@
 			text-decoration: underline;
 			background-color: #068292;
 			border-radius: 15px;
-			padding: 0px 22px;
-			margin: 0px -22px;
+			padding: 0px 18px;
+			margin: 0px -18px;
 		}
-		@media (max-width: ($md1 + px)) {
+		@media (max-width: ($md1+px)) {
 		}
 		@media (max-width: ($md2+px)) {
 			color: #000;
-			padding: 0px 0px 20px 0px;
 			font-size: 20px;
+			&:hover {
+				background-color: #14c0d4;
+			}
 		}
 		@media (max-width: 640px) {
-			// color: #000;
 		}
 	}
 }
