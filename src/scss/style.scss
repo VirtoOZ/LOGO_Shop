@@ -80,10 +80,53 @@ body {
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>=================================
 
 //<ОСНОВНОЙ БЛОК>=================================
+
 .page {
 	flex: 1 1 auto;
 	background-color: rgba(0, 0, 0, 0.3);
+	// .page__container
+	&__container {
+	}
+	// .page__side
+	&__side {
+	}
+	// .page__menu
+	&__menu {
+	}
+	// .page__content
+	&__content {
+	}
 }
+
+.menu-page {
+	// .menu-page__header
+	&__header {
+	}
+	// .menu-page__title
+	&__title {
+	}
+	// .menu-page__burger
+	&__burger {
+	}
+	// .menu-page__body
+	&__body {
+	}
+	// .menu-page__list
+	&__list {
+	}
+	// .menu-page__link
+	&__link {
+		// .menu-page__link_parent
+		&_parent {
+		}
+	}
+	// .menu-page__submenu
+	&__submenu {
+	}
+}
+.submenu-page {
+}
+
 //=================================
 
 //</ОСНОВНОЙ БЛОК>=================================
