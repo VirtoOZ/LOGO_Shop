@@ -65,7 +65,7 @@
 		// vertical-align:;
 		@media (max-width: ($md3+px)) {
 			height: 75px;
-			padding: 0 5px;
+			// padding: 0 5px;
 		}
 		@media (max-width: 480px) {
 			height: 65px;
@@ -146,10 +146,12 @@
 			top: 0;
 			left: 0;
 			overflow: auto;
-			padding: 75px 20px 0px 20px;
+			padding: 90px 20px 20px 20px;
 			z-index: 2;
 			background-color: #fff;
-			display: none;
+			opacity: 0;
+			transition: all 0.5s ease 0s;
+			visibility: hidden;
 			&::before {
 				content: "";
 				background-color: #14c0d4;
@@ -161,11 +163,13 @@
 			}
 			//.menu__body._active
 			&._active {
-				display: block;
+				opacity: 1;
+				visibility: visible;
 			}
 		}
+		//PC-First 768px
 		@media (max-width: ($md3+px)) {
-			// padding-top: 75px;
+			padding-top: 75px;
 			&::before {
 				content: "";
 				height: 76px;
@@ -186,7 +190,6 @@
 	// .menu-header__body
 	&__body {
 	}
-
 	// .menu-header__list
 	&__list {
 		// flex контейнер
@@ -195,10 +198,14 @@
 		li {
 			// flex элемент
 			flex: 0 0 33.333%;
-			margin: 0px 0px 20px 0px;
+			//PC-First 992px
+			@media (max-width: ($md2+px)) {
+				padding: 10px 0px;
+			}
 		}
 		@media (max-width: ($md2+px)) {
 			display: block;
+			margin: 0px 0px 20px 20px;
 			padding: 25px 0px 0px 0px;
 		}
 		@media (max-width: ($md3+px)) {
@@ -220,8 +227,8 @@
 			text-decoration: underline;
 			background-color: #068292;
 			border-radius: 15px;
-			padding: 0px 18px;
-			margin: 0px -18px;
+			padding: 0px 20px;
+			margin: 0px -20px;
 		}
 		@media (max-width: ($md1+px)) {
 		}
@@ -261,11 +268,9 @@
 		z-index: 3;
 		background: url("../img/icons/header/phone.png") center/contain no-repeat;
 		@media (max-width: ($md2+px)) {
-			// width: 33px;
-			// height: 33px;
+			margin: 0px 5px 0px 0px;
 		}
 		@media (max-width: ($md3+px)) {
-			margin: 0px 5px 0px 0px;
 		}
 		@media (max-width: ($md4+px)) {
 			width: 25px;
