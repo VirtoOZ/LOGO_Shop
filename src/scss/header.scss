@@ -1,5 +1,10 @@
 .header {
-	background: url("../img/icons/header/background-pc.jpg") top no-repeat;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background: #fff url("../img/icons/header/background-pc.jpg") top no-repeat;
 	// .header__column
 	&__column {
 		&_logo {
