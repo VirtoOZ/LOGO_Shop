@@ -1,0 +1,78 @@
+//<FORM ()>======================================================================
+.form {
+	//.form__row
+	&__row {
+	}
+	//.form__column
+	&__column {
+	}
+	//.form__line
+	&__line {
+	}
+	//.form__input
+	&__input {
+	}
+	//.form__button
+	&__button {
+	}
+	//.form__error
+	&__error {
+	}
+}
+//</FORM ()>======================================================================
+
+//<BUTTON (a.btn+tab)>======================================================================
+.btn {
+	display: inline-flex;
+	padding: 0px 25px;
+	justify-content: center;
+	align-items: center;
+	height: 39px;
+	object-fit: contain;
+	background-color: #f68038;
+	color: #fff;
+	transition: all 0.5s ease 0s;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 12px;
+	line-height: 18px;
+	//Mob-First md3+px
+	@media (min-width: ($md3+px)) {
+		&:hover {
+			background-color: #fc6000;
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+}
+//</BUTTON()>======================================================================
+
+//<SELECT (sel+tab)>======================================================================
+.select {
+	position: relative;
+	//.select__item
+	&__item {
+	}
+}
+//</SELECT (sel+tab)>======================================================================
+
+//<INPUT (inp+tab)>======================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	width: 100%;
+	display: block;
+	padding: 0px 20px;
+	&._focus {
+	}
+	&._error {
+	}
+}
+textarea.input {
+	resize: none;
+	padding: 0px 0px;
+}
+//</INPUT>======================================================================
