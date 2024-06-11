@@ -6,10 +6,9 @@ import * as flsFunctions from './modules/functions.js'
 // import './files/regular.js';
 // import './files/forms.js';
 // import './files/scroll.js';
-// import * as flsWebP from './modules/functions.js';
-// flsWebP.isWebp();
+import * as flsWebP from './files/functions.js';
+flsWebP.isWebp();
 // import './modules/functions.js';
-
-import 'functions.js';
+import './files/functions.js';
 import './files/script.js';
 import './files/dynamic_adapt.js';

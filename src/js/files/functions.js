@@ -17,6 +17,7 @@ export function isWebp() {
 	});
 }
 
+/*
 // *** функция трансформирует размер изображения с байт в нормальный размер ***
 export function bytesToSize(bytes) {
 	const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB']
@@ -283,85 +284,8 @@ if (spollersArray.length > 0) {
 		}
 	}
 }
+ */
 
-/*
-Анимированное плавное открытие и закрытие блока.
-Может применяться к меню или выпадающему списку
-Выписано из видео фрилансера.
-В CSS нужно установить display: none; для родителя.
-*/
-//<>================================================================
-//SlideUP
-let _slideUp = (target, duration = 500) => {
-	target.style.transitionProperty = 'height, margin, padding';
-	target.style.transitionDuration = duration + 'ms';
-	target.style.height = target.offsetHeight + 'px';
-	target.offsetHeight;
-	target.style.overflow = 'hidden';
-	target.style.height = 0;
-	target.style.paddingTop = 0;
-	target.style.paddingBottom = 0;
-	target.style.marginTop = 0;
-	target.style.marginBottom = 0;
-	window.setTimeout(() => {
-		target.style.display = 'none';
-		target.style.removeProperty('height');
-		target.style.removeProperty('padding-top');
-		target.style.removeProperty('padding-bottom');
-		target.style.removeProperty('margin-top');
-		target.style.removeProperty('margin-bottom');
-		target.style.removeProperty('overflow');
-		target.style.removeProperty('transition-duration');
-		target.style.removeProperty('transition-property');
-		target.classList.remove('_slide');
-	}, duration);
-}
-
-//SlideDown
-let _slideDown = (target, duration = 500) => {
-	target.style.removeProperty('display');
-	let display = window.getComputedStyle(target).display;
-	if (display === 'none') {
-		display = 'block';
-	}
-	target.style.display = display;
-	let height = target.offsetHeight;
-	target.style.overflow = 'hidden';
-	target.style.height = 0;
-	target.style.paddingTop = 0;
-	target.style.paddingBottom = 0;
-	target.style.marginTop = 0;
-	target.style.marginBottom = 0;
-	target.offsetHeight;
-	target.style.transitionProperty = 'height, margin, padding';
-	target.style.transitionDuration = duration + 'ms';
-	target.style.height = height + 'px';
-	target.style.removeProperty('padding-top');
-	target.style.removeProperty('padding-bottom');
-	target.style.removeProperty('margin-top');
-	target.style.removeProperty('margin-bottom');
-	window.setTimeout(() => {
-		target.style.removeProperty('height');
-		target.style.removeProperty('overflow');
-		target.style.removeProperty('transition-duration');
-		target.style.removeProperty('transition-property');
-		target.classList.remove('_slide');
-	}, duration);
-}
-
-//SlideToggLe
-let _slideToggle = (target, duration = 500) => {
-	if (!target.classList.contains('_slide')) {
-		target.classList.add('_slide');
-		// if (target.hidden) {
-		if (window.getComputedStyle(target).display === 'none') {
-			return _slideDown(target, duration);
-		} else {
-			return _slideUp(target, duration);
-		}
-	}
-}
-// ================================================================
 
 
 /*
@@ -369,14 +293,14 @@ let _slideToggle = (target, duration = 500) => {
 Для заголовков слайдеров пишем атрибут data-spoller
 Если нужно обеспечить работу спойлеров на всех размерах экранов пишем data-spollers без параметров
 Если нужно выключить\включить работу спойлеров на разных размерах экранов пишем параметры ширины и типа брекпоинта.
-Например: 
+Например:
 data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
 data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
-	
+
 Если нужно чтобы в блоке открывалься только один спойлер добавляем атрибут data-one-spoller
 */
 // ================================================================
-// *** Адаптивное изображение для IE, добавляет класс .ibg к body ***
+/*// *** Адаптивное изображение для IE, добавляет класс .ibg к body ***
 export function ibg() {
 	let ibg = document.querySelectorAll('.ibg')
 	for (var i = 0; i < ibg.length; i++) {
@@ -387,3 +311,4 @@ export function ibg() {
 	}
 }
 ibg()
+*/
