@@ -6,8 +6,8 @@ if (iconMenu) {//Проверяем есть ли menu__icon
 		document.body.classList.toggle('_lock');//Для Body даем класс Lock для отключения прокрутки
 		iconMenu.classList.toggle('_active');//добавляем класс active menu__icon
 		menuBody.classList.toggle('_active');//добавляем класс active menu__body
-	})
-}
+	});
+};
 //</BURGER>=================================
 
 
@@ -15,11 +15,10 @@ if (iconMenu) {//Проверяем есть ли menu__icon
 let menuPageBurger = document.querySelector('.menu-page__burger');
 let menuPageBody = document.querySelector('.menu-page__body');
 menuPageBurger.addEventListener("click", function (e) {
-	menuPageBody.classList.toggle('_active');
+	// menuPageBody.classList.toggle('_active');
 	menuPageBurger.classList.toggle('_active');
-
+	_slideToggle(menuPageBody, 500);
 });
-
 //</BURGER SIDE-MENU>=================================
 
 
@@ -37,5 +36,13 @@ for (let index = 0; index < menuParents.length; index++) {
 		menuParent.classList.remove('_active');
 	});
 }
-
 //</SIDE-MENU>=================================
+
+//<SELECT-MENU>=================================
+let searchSelect = document.querySelector('.search-page__select');
+let categoriesSearch = document.querySelector('.categories-search');
+searchSelect.addEventListener("click", function (e) {
+	searchSelect.classList.toggle('_active');
+	_slideToggle(categoriesSearch, 500);
+});
+//</SELECT-MENU>=================================
