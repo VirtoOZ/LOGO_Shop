@@ -45,6 +45,23 @@ searchTitle.addEventListener("click", function (e) {
 	searchTitle.classList.toggle('_active');
 	_slideToggle(categoriesSearch, 500);
 });
+
+const checkboxCatergories = document.querySelectorAll('.categories-search__checkbox');
+
+for (let index = 0; index < checkboxCatergories.length; index++) {
+	const checkboxCatergory = checkboxCatergories[index];
+	checkboxCatergory.addEventListener("change", function (e) {
+		checkboxCatergory.classList.toggle('_active');
+		const checkboxActiveCatergories = document.querySelectorAll('.categories-search__checkbox._active');
+		if (checkboxActiveCatergories.length > 0) {
+			searchTitle.classList.add('_categories');
+			let searchQuantity = document.querySelector('.search-page__quantity');
+			searchQuantity.innerHTML = searchQuantity.getAttribute('data-text') + checkboxActiveCatergories.length;
+		} else {
+			searchTitle.classList.remove('_categories');
+		}
+	});
+}
 //</SELECT-MENU>=================================
 
 /*
