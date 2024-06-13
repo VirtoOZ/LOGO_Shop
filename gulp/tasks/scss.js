@@ -1,4 +1,4 @@
-import * as dartSass from 'sass'; //препроцессор
+import dartSass from 'sass'; //препроцессор
 import gulpSass from 'gulp-sass'; //плагин для запуска препроцессора
 import rename from 'gulp-rename';
 

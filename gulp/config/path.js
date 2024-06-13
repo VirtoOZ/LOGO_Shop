@@ -23,7 +23,7 @@ export const path = {
 		scss: `${srcFolder}/scss/style.scss`, //путь к папке c файлом стилей
 		html: `${srcFolder}/*.html`, //путь к папке в которой есть файлы html
 		files: `${srcFolder}/files/**/*.*`, //путь к папке которую хотим копировать
-		//fonts: `${srcFolder}/fonts/*.ttf`, //путь к папке которую хотим копировать
+		fonts: `${srcFolder}/fonts/*.ttf`, //путь к папке которую хотим копировать
 	},
 	// объект путей к файлам за которыми нужно следить
 	watch: {
