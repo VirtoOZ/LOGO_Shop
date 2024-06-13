@@ -79,3 +79,4 @@ import { _slideDown } from "./slide.js";
 import { _slideToggle } from "./slide.js";
 // ================================================================
 import { ibg } from "./functions.js"; ibg();
+import { isWebp } from "./functions.js"; isWebp();

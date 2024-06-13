@@ -12,7 +12,7 @@ export function isWebp() {
 
 	// Добавление класса _webp или _no-webp для HTML
 	testWebP(function (support) {
-		let className = support === true ? 'webp' : 'no-webp';
+		let className = (support === true) ? 'webp' : 'no-webp';
 		document.documentElement.classList.add(className);
 	});
 }
@@ -305,11 +305,8 @@ data-spollers="768,min" - спойлеры будут работать толь�
 // *** Адаптивное изображение для IE, добавляет класс .ibg к body ***
 export function ibg() {
 	let ibg = document.querySelectorAll('._ibg');
-	console.log(ibg);
-
 	for (var i = 0; i < ibg.length; i++) {
 		if (ibg[i].querySelector('img')) {
-			console.log("найдено");
 			ibg[i].style.backgroundImage =
 				'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
 		}

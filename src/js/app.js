@@ -5,7 +5,8 @@ import * as flsFunctions from './modules/functions.js'
 // import './files/script.js';
 // import './files/regular.js';
 // import './files/forms.js';
-// import './files/scroll.js';
-// import './files/functions.js';
-import './files/script.js';
-import './files/dynamic_adapt.js';
+import './files/slide.js';
+import './files/sliders.js';
+import './files/script.js'
+import './files/dynamic_adapt.js'
+// @@include('files/script.js', {})

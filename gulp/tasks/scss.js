@@ -33,7 +33,7 @@ export const scss = () => {
 		.pipe(app.plugins.if(app.isBuild, webpcss({ webpClass: '.webp', noWebpClass: '.no-webp' })))
 		.pipe(app.plugins.if(app.isBuild, autoprefixer({
 			grid: true,
-			overrideBrowserlists: ["last 3 version"],
+			overrideBrowserslist: ["last 3 version"],
 			cascade: true,
 		})))
 		// Раскомментировать если нужен не сжатый дубль файла стилей

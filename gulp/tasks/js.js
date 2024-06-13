@@ -10,7 +10,7 @@ export const js = () => {
 			})
 		))
 
-		.pipe(app.plugins.fileinclude()) //сбор файла из частей
+		.pipe(fileinclude()) //сбор файла из частей
 		.pipe(webpack({
 			mode: app.isBuild ? 'production' : 'development',
 			output: {
@@ -18,5 +18,5 @@ export const js = () => {
 			}
 		}))
 		.pipe(app.gulp.dest(app.path.build.js)) //перенос в папку назначения созданные и обработанные файлы
-		.pipe(app.plugins.browsersync.stream()) //обновляем браузер
+		.pipe(app.plugins.browsersync.stream()); //обновляем браузер
 }
