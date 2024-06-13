@@ -17,6 +17,8 @@ export function isWebp() {
 	});
 }
 
+
+
 /*
 // *** функция трансформирует размер изображения с байт в нормальный размер ***
 export function bytesToSize(bytes) {
@@ -300,15 +302,16 @@ data-spollers="768,min" - спойлеры будут работать толь�
 Если нужно чтобы в блоке открывалься только один спойлер добавляем атрибут data-one-spoller
 */
 // ================================================================
-/*// *** Адаптивное изображение для IE, добавляет класс .ibg к body ***
+// *** Адаптивное изображение для IE, добавляет класс .ibg к body ***
 export function ibg() {
-	let ibg = document.querySelectorAll('.ibg')
+	let ibg = document.querySelectorAll('._ibg');
+	console.log(ibg);
+
 	for (var i = 0; i < ibg.length; i++) {
 		if (ibg[i].querySelector('img')) {
+			console.log("найдено");
 			ibg[i].style.backgroundImage =
-				'url(' + ibg[i].querySelector('img').getAttribute('src') + ')'
+				'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
 		}
 	}
 }
-ibg()
-*/
