@@ -28,7 +28,7 @@ export let _slideUp = (target, duration = 500) => {
 		target.style.removeProperty('transition-property');
 		target.classList.remove('_slide');
 	}, duration);
-}
+};
 
 // SlideDown
 export let _slideDown = (target, duration = 500) => {
@@ -60,7 +60,7 @@ export let _slideDown = (target, duration = 500) => {
 		target.style.removeProperty('transition-property');
 		target.classList.remove('_slide');
 	}, duration);
-}
+};
 
 //SlideToggLe
 export let _slideToggle = (target, duration = 500) => {
@@ -73,5 +73,5 @@ export let _slideToggle = (target, duration = 500) => {
 			return _slideUp(target, duration);
 		}
 	}
-}
+};
 //</ANIM-SLIDE>================================================================

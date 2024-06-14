@@ -340,7 +340,10 @@
 						<button type="submit" class="search-page__btn btn">Найти</button>
 					</form>
 					<div class="page__slider mainslider">
-						<div class="mainslider__body _swiper">
+						<!-- Слайдер -->
+						<div class="mainslider__body swiper">
+							<!-- тут JS автоматически добавляет оболочку swiper-wrapper -->
+							<!--это сами слайды  -->
 							<div class="mainslider__slide">
 								<div class="mainslider__content content-mainslider">
 									<div class="content-mainslider__title">
@@ -358,15 +361,37 @@
 										</a>
 									</div>
 								</div>
-								<div class="mainslider__image _ibg">
+								<div class="mainslider__image ibg">
 									<img src="@img/icons/slider/bg1.jpg" alt="первый слайд с кросовком">
 								</div>
 							</div>
+							<!--это сами слайды  -->
+							<div class="mainslider__slide">
+								<div class="mainslider__content content-mainslider">
+									<div class="content-mainslider__title">
+										<span>мега</span>распродажа
+									</div>
+									<div class="content-mainslider__text text-mainslider">
+										<p><span class="text-mainslider__orange">успей купить </span>тренажеры</p>
+										<p class="text-mainslider__mark">по старой цене</p>
+										<p>до их <span class="text-mainslider__gray">повышения</span></p>
+									</div>
+									<div class="content-mainslider__footer">
+										<div class="content-mainslider__prise rub">от 45 000</div>
+										<a href="#" class="content-mainslider__button">
+											подробнее<span></span>
+										</a>
+									</div>
+								</div>
+								<div class="mainslider__image ibg">
+									<img src="@img/icons/slider/bg1.jpg" alt="первый слайд с кросовком">
+								</div>
+							</div>
+
 						</div>
 						<div class="mainslider__dotts"></div>
 					</div>
 				</div>
-
 			</div>
 		</main>
 		@@include('html/_footer.html',{})

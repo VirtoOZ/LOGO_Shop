@@ -1,8 +1,10 @@
 // BildSlider
-let sliders = document.querySelectorAll('._swiper');
-if (sliders) {
+let sliders = document.querySelectorAll('.swiper');
+if (sliders.length > 0) {
 	for (let index = 0; index < sliders.length; index++) {
 		let slider = sliders[index];
+		console.log(slider);
+
 		if (!slider.classList.contains('swiper-bild')) {
 			let slider_items = slider.children;
 			if (slider_items) {
@@ -11,13 +13,30 @@ if (sliders) {
 					el.classList.add('swiper-slide');
 				}
 			}
+			// ветка Слайдов с содержимым mainslider__slide(swiper-slide) и глубже
 			let slider_content = slider.innerHTML;
+			// console.log(slider.innerHTML);
 			// let slider_wrapper = element('div', ['swiper-wrapper'], slider_content);
+			// создаем пустой див
 			let slider_wrapper = document.createElement('div');
+			// console.log(slider_wrapper);
+			// даем этому диву класс swiper-wrapper
 			slider_wrapper.classList.add('swiper-wrapper');
+			// console.log(slider_wrapper);
+
+			// помещаем ветку Слайдов внутрь оболочки swiper-wrapper
 			slider_wrapper.innerHTML = slider_content;
+			// console.log(slider_wrapper.innerHTML = slider_content);
+			// console.log(slider.innerHTML);
+
+			// затираем всё что было внутри mainslider__body
 			slider.innerHTML = '';
+			// console.log(slider.innerHTML);
+
+			// в пустой блок mainslider__body вставляем оболочку swiper-wrapper
 			slider.appendChild(slider_wrapper);
+			// console.log(slider);
+			// даем клас swiper-bild
 			slider.classList.add('swiper-bild');
 			// if (slider.classList.contains('_swiper_scroll')) {
 			// let sliderScroll = element('div', ['swiper-scrollbar']);
@@ -29,10 +48,12 @@ if (sliders) {
 		}
 	}
 	sliders_bild_callback();
+	// }
 }
 
+
 function sliders_bild_callback(params) { }
-const sliderScrollItems = document.querySelectorAll('._swiper_scroll');
+/* const sliderScrollItems = document.querySelectorAll('._swiper_scroll');
 if (sliderScrollItems.length > 0) {
 	for (let index = 0; index < sliderScrollItems.length; index++) {
 		const sliderScrollItem = sliderScrollItems[index];
@@ -55,35 +76,83 @@ if (sliderScrollItems.length > 0) {
 		sliderScroll.scrollbar.updateSize();
 	}
 }
-
+ */
 
 //Инициализация и Настройки слайдера 1
-if (document.querySelector('.slider-main__body')) {
-	new Swiper('.slider-main__body', {
+if (sliders.length > 0) {
+	// console.log(document.querySelector('._swiper'));
+	let mainSwiper = new Swiper('.mainslider__body', {
+		// slideToClickedSlide: true,
 		observer: true,
-		observeParents: true,
+		// observeParents: true,
 		slidesPerView: 1,
-		spaceBetween: 32,
-		watchOverflow: true,
+		spaceBetween: 30,
+		autoHeight: true,
 		speed: 800,
+
+
 		loop: true,
-		loopAdditionalSlides: 5,
-		preloadImages: false,
-		parallax: true,
-		// Dots
+		// loopAdditionalSlides: 5,
+		// preloadImages: false,
+		// parallax: true,
+		// watchOverflow: true,
+
+		// effect: 'fade',
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+
+		//touchRatio: 0,
+		//simulateTouch: false,
+		//Loop: true,
+		//preloadImages: false,
+		//Lazy: true,
+		// Dotts
 		pagination: {
-			el: '.controls-slider-main__dotts',
+			el: '.mainslider__dotts',
 			clickable: true,
 		},
-		// Arrows
+		/* // Arrows
 		navigation: {
 			nextEl: '.slider-main .slider-arrow_next',
 			prevEl: '.slider-main .slider-arrow_prev',
+		}, */
+
+		/* 		breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 0,
+						autoHeight: true,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+		
+					1268: {
+						slidesPerView: 4,
+						spaceBetween: 30,
+					},
+				},
+		 */
+		on: {
+			lazyImageReady: function () {
+				ibg();
+			},
 		},
-	})
+		// And if we need scrollbar
+		//scroLLbar: {
+		// el: '.swiper-scrollbar',
+		// }
+	});
 }
 
-//Инициализация и Настройки слайдера 2
+/* //Инициализация и Настройки слайдера 2
 if (document.querySelector('.slider-rooms__body')) {
 	new Swiper('.slider-rooms__body', {
 		observer: true,
@@ -149,4 +218,5 @@ if (document.querySelector('.slider-tips__body')) {
 		},
 	})
 }
-// let slider_about = new Swiper()
+let slider_about = new Swiper()
+// let slider_about = new Swiper('.mainslider__slide') */

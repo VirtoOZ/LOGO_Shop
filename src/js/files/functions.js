@@ -27,7 +27,7 @@ isWebp();
 Для корректного отображения картинок в Internet Explorer добавляет класс
 .ibg и применяет атрибут background для упрощения адаптива.
 */
-export function ibg() {
+export function iBg() {
 	let ibg = document.querySelectorAll('._ibg');
 	for (var i = 0; i < ibg.length; i++) {
 		if (ibg[i].querySelector('img')) {
@@ -36,7 +36,7 @@ export function ibg() {
 		}
 	}
 }
-ibg();
+iBg();
 //</IE Ibg>======================================================================
 
 

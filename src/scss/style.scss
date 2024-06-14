@@ -13,6 +13,10 @@
 @import "icons";
 //</Иконочные шрифты>=================================
 
+//<Иконочные шрифты>=================================
+@import "swiper-bundle";
+//</Иконочные шрифты>=================================
+
 //<Шрифт по умолчанию>=================================
 $fontFamily: "Roboto";
 //</Шрифт по умолчанию>=================================
@@ -55,8 +59,8 @@ body {
 //<ОСНОВНАЯ СЕТКА>=================================
 ._container {
 	max-width: $maxWidthContainer + px;
-	margin: 0 auto;
-	padding: 0 20px;
+	margin: 0px auto;
+	padding: 0px 20px;
 	//PC-First 768px
 	@media (max-width: ($md3+px)) {
 		padding: 0 10px;
@@ -98,8 +102,10 @@ body {
 	}
 	// .page__content
 	&__content {
+		min-width: 0;
 		flex: 1 1 auto;
 		padding: 0px 0px 0px 30px;
+		margin: 160px 0px 0px 0px;
 	}
 	// .page__search
 	&__search {
@@ -386,7 +392,7 @@ body {
 
 //======================================================================
 .search-page {
-	padding: 160px 0px 0px 0px;
+	// padding: 160px 0px 0px 0px;
 	display: flex;
 	position: relative;
 	// .search-page__select
