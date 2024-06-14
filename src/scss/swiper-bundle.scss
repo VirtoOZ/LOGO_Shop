@@ -59,7 +59,7 @@
 .swiper-android .swiper-slide,
 .swiper-ios .swiper-slide,
 .swiper-wrapper {
-	transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0, 0);
 }
 .swiper-horizontal {
 	touch-action: pan-y;
