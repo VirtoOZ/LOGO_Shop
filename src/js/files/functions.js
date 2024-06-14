@@ -1,4 +1,8 @@
-// *** Проверка поддержки webp, добавление класса webp или no-webp для HTML
+//<IsWEBP>================================================================
+/*   Проверка поддержки webp.
+Добавление класса webp или no-webp для HTML
+в зависимости от поддержки браузером
+*/
 export function isWebp() {
 	// Проверка поддержки webp
 	function testWebP(callback) {
@@ -9,13 +13,31 @@ export function isWebp() {
 		webP.src =
 			'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA'
 	};
-
 	// Добавление класса _webp или _no-webp для HTML
 	testWebP(function (support) {
 		let className = (support === true) ? 'webp' : 'no-webp';
 		document.documentElement.classList.add(className);
 	});
 }
+isWebp();
+//</IsWEBP>================================================================
+
+//<IE Ibg>================================================================
+/* Адаптивное изображение для IE Ibg.
+Для корректного отображения картинок в Internet Explorer добавляет класс
+.ibg и применяет атрибут background для упрощения адаптива.
+*/
+export function ibg() {
+	let ibg = document.querySelectorAll('._ibg');
+	for (var i = 0; i < ibg.length; i++) {
+		if (ibg[i].querySelector('img')) {
+			ibg[i].style.backgroundImage =
+				'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+		}
+	}
+}
+ibg();
+//</IE Ibg>======================================================================
 
 
 
@@ -301,14 +323,4 @@ data-spollers="768,min" - спойлеры будут работать толь�
 
 Если нужно чтобы в блоке открывалься только один спойлер добавляем атрибут data-one-spoller
 */
-// ================================================================
-// *** Адаптивное изображение для IE, добавляет класс .ibg к body ***
-export function ibg() {
-	let ibg = document.querySelectorAll('._ibg');
-	for (var i = 0; i < ibg.length; i++) {
-		if (ibg[i].querySelector('img')) {
-			ibg[i].style.backgroundImage =
-				'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
-		}
-	}
-}
+
