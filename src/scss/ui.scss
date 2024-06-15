@@ -21,3 +21,27 @@
 	user-select: none;
 }
 //=================================
+ol.counter {
+	list-style-type: none;
+	counter-reset: item;
+	li {
+		position: relative;
+		padding: 0px 0px 0px 45px;
+		&::before {
+			counter-increment: item;
+			content: counter(item);
+			position: absolute;
+			width: 28px;
+			height: 28px;
+			top: 0;
+			left: 0;
+			color: #818181;
+			font-size: 14px;
+			font-weight: 700;
+			text-align: center;
+			line-height: 26px;
+			border-radius: 50%;
+			border: 1px solid #4274bb;
+		}
+	}
+}

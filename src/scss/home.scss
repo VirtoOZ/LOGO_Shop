@@ -1,7 +1,6 @@
 //======================================================================
 .mainslider {
 	// .mainslider__body
-	// position: relative;
 
 	&__body {
 	}
@@ -15,11 +14,6 @@
 	}
 	// .mainslider__images
 	&__image {
-		// position: absolute;
-		// width: 100%;
-		// height: 100%;
-		// top: 0;
-		// left: 0;
 		img {
 			position: absolute;
 			width: 100%;
@@ -30,11 +24,44 @@
 	}
 	// .mainslider__dotts
 	&__dotts {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		// margin: -27.5px 0;
+		// автоподсчет
+		counter-reset: item;
+		.swiper-pagination-bullet {
+			position: relative;
+			height: 55px;
+			width: 55px;
+			border-radius: 50%;
+			overflow: hidden;
+			border: 4px solid #fff;
+		}
+		.swiper-pagination-bullet-active {
+			&::after {
+				font-size: 16px;
+				font-weight: 900;
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				background-color: #f68038;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				counter-increment: item;
+				content: counter(item);
+			}
+		}
 	}
 }
 
 .content-mainslider {
-	padding: 20px 35px;
+	padding: 20px 35px 55px 35px;
 	// .content-mainslider__title
 	&__title {
 		font-size: 48px;
@@ -55,7 +82,8 @@
 	// .content-mainslider__footer
 	&__footer {
 		text-align: center;
-		margin: 0px 0px 40px 0px;
+		padding: 15px 0px 0px 0px;
+		// margin: 0px 0px 40px 0px;
 	}
 	// .content-mainslider__prise
 	&__prise {
@@ -64,25 +92,30 @@
 		line-height: 0.67;
 		color: #fff;
 		margin: 0px 0px 25px 0px;
+		&::after {
+			font-size: 30px;
+			margin: 0px 0px 0px 10px;
+		}
 	}
 	// .content-mainslider__button
 	&__button {
-		text-transform: uppercase;
-		position: relative;
-		font-size: 14px;
 		font-weight: 900;
-		line-height: 1.71;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
 		color: #fff;
-		border: 4px solid #fff;
+		border: 3px solid #fff;
 		border-radius: 15px;
-		padding: 5px 40px 5px 20px;
+		padding: 0px 20px;
+		height: 33px;
 		span {
-			position: absolute;
-			background: url("../img/icons/slider/btn_arrow.png") center/contain no-repeat;
-			width: 14px;
-			height: 14px;
-			top: 6px;
-			right: 10px;
+			text-transform: uppercase;
+			padding: 0px 30px 0px 0px;
+			background: url("../img/icons/slider/btn_arrow.png") right 0 no-repeat;
+			// width: 14px;
+			// height: 14px;
+			// top: 6px;
+			// right: 10px;
 		}
 	}
 }

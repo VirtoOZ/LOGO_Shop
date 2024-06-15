@@ -3,8 +3,6 @@ let sliders = document.querySelectorAll('.swiper');
 if (sliders.length > 0) {
 	for (let index = 0; index < sliders.length; index++) {
 		let slider = sliders[index];
-		console.log(slider);
-
 		if (!slider.classList.contains('swiper-bild')) {
 			let slider_items = slider.children;
 			if (slider_items) {
@@ -15,27 +13,17 @@ if (sliders.length > 0) {
 			}
 			// ветка Слайдов с содержимым mainslider__slide(swiper-slide) и глубже
 			let slider_content = slider.innerHTML;
-			// console.log(slider.innerHTML);
 			// let slider_wrapper = element('div', ['swiper-wrapper'], slider_content);
 			// создаем пустой див
 			let slider_wrapper = document.createElement('div');
-			// console.log(slider_wrapper);
 			// даем этому диву класс swiper-wrapper
 			slider_wrapper.classList.add('swiper-wrapper');
-			// console.log(slider_wrapper);
-
 			// помещаем ветку Слайдов внутрь оболочки swiper-wrapper
 			slider_wrapper.innerHTML = slider_content;
-			// console.log(slider_wrapper.innerHTML = slider_content);
-			// console.log(slider.innerHTML);
-
 			// затираем всё что было внутри mainslider__body
 			slider.innerHTML = '';
-			// console.log(slider.innerHTML);
-
 			// в пустой блок mainslider__body вставляем оболочку swiper-wrapper
 			slider.appendChild(slider_wrapper);
-			// console.log(slider);
 			// даем клас swiper-bild
 			slider.classList.add('swiper-bild');
 			// if (slider.classList.contains('_swiper_scroll')) {
@@ -50,7 +38,6 @@ if (sliders.length > 0) {
 	sliders_bild_callback();
 	// }
 }
-
 
 function sliders_bild_callback(params) { }
 /* const sliderScrollItems = document.querySelectorAll('._swiper_scroll');
@@ -79,35 +66,29 @@ if (sliderScrollItems.length > 0) {
  */
 
 //Инициализация и Настройки слайдера 1
-if (sliders.length > 0) {
+if (document.querySelector('.mainslider')) {
 	// console.log(document.querySelector('._swiper'));
 	let mainSwiper = new Swiper('.mainslider__body', {
-		// slideToClickedSlide: true,
+		// slideToClickedSlide: false,
 		observer: true,
-		// observeParents: true,
+		observeParents: false,
 		slidesPerView: 1,
 		spaceBetween: 30,
 		autoHeight: true,
 		speed: 800,
-
-
-		loop: true,
-		// loopAdditionalSlides: 5,
-		// preloadImages: false,
+		// loop: true,
+		// loopAdditionalSlides: 2,
+		// preloadImages: true,
 		// parallax: true,
-		// watchOverflow: true,
-
+		watchOverflow: 0,
 		// effect: 'fade',
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
-
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: true,
+		// },
 		//touchRatio: 0,
 		//simulateTouch: false,
-		//Loop: true,
-		//preloadImages: false,
-		//Lazy: true,
+		// Lazy: true,
 		// Dotts
 		pagination: {
 			el: '.mainslider__dotts',
@@ -140,11 +121,11 @@ if (sliders.length > 0) {
 					},
 				},
 		 */
-		on: {
-			lazyImageReady: function () {
-				ibg();
-			},
-		},
+		/* 		on: {
+					lazyImageReady: function () {
+						ibg();
+					},
+				}, */
 		// And if we need scrollbar
 		//scroLLbar: {
 		// el: '.swiper-scrollbar',
