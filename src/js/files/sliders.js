@@ -76,11 +76,11 @@ if (document.querySelector('.mainslider')) {
 		spaceBetween: 30,
 		autoHeight: true,
 		speed: 800,
+		watchOverflow: 0,
 		// loop: true,
 		// loopAdditionalSlides: 2,
 		// preloadImages: true,
 		// parallax: true,
-		watchOverflow: 0,
 		// effect: 'fade',
 		// autoplay: {
 		// 	delay: 3000,
@@ -131,6 +131,19 @@ if (document.querySelector('.mainslider')) {
 		// el: '.swiper-scrollbar',
 		// }
 	});
+	let mainsliderImages = document.querySelectorAll('.mainslider__image');
+	let mainsliderDotts = document.querySelectorAll('.mainslider__dotts .swiper-pagination-bullet');
+	for (let index = 0; index < mainsliderImages.length; index++) {
+		const mainsliderImage = mainsliderImages[index].querySelector('img').getAttribute('src');
+		// console.log(mainsliderImage);
+
+		mainsliderDotts[index].style.backgroundImage = "url('" + mainsliderImage + "')";
+	}
+
+
+
+
+
 }
 
 /* //Инициализация и Настройки слайдера 2

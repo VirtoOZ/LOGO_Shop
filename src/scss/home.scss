@@ -28,7 +28,7 @@
 		z-index: 1;
 		display: flex;
 		justify-content: center;
-		// margin: -27.5px 0;
+		margin: -27.5px 0px 0px 0px;
 		// автоподсчет
 		counter-reset: item;
 		.swiper-pagination-bullet {
@@ -38,6 +38,9 @@
 			border-radius: 50%;
 			overflow: hidden;
 			border: 4px solid #fff;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
 		}
 		.swiper-pagination-bullet-active {
 			&::after {
