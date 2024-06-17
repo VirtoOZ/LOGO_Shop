@@ -88,26 +88,40 @@ body {
 .page {
 	flex: 1 1 auto;
 	background-color: rgba(0, 0, 0, 0.3);
+	padding: 100px 0px 0px 0px;
+	//Mob-First md3+px
+	@media (min-width: ($md4+px)) {
+		padding: 160px 0px 0px 0px;
+	}
 	// .page__container
 	&__container {
-		display: flex;
+		//Mob-First md2+px
+		@media (min-width: ($md2+px)) {
+			display: flex;
+		}
 	}
 	// .page__side
 	&__side {
 		flex: 0 0 260px;
-		padding: 160px 0px 0px 0px;
 		position: relative;
 		z-index: 3;
+		//PC-First md2+px
 	}
 	// .page__menu
 	&__menu {
+		@media (max-width: ($md2+px)) {
+			margin: 0px 0px 22px 0px;
+		}
 	}
 	// .page__content
 	&__content {
 		min-width: 0;
 		flex: 1 1 auto;
-		padding: 0px 0px 0px 30px;
-		margin: 160px 0px 0px 0px;
+		// margin: 160px 0px 0px 0px;
+		//Mob-First md2+px
+		@media (min-width: ($md2+px)) {
+			padding: 0px 0px 0px 30px;
+		}
 	}
 	// .page__search
 	&__search {
@@ -125,7 +139,7 @@ body {
 
 .menu-page {
 	position: relative;
-	background: url("@img/icons/Left-bar/bg_menu.png") top no-repeat;
+	background: url("@img/icons/Left-bar/bg_menu.png") top repeat;
 	// .menu-page__header
 	&__header {
 		display: flex;
@@ -134,6 +148,7 @@ body {
 	}
 	// .menu-page__title
 	&__title {
+		flex: 1 1 auto;
 		font-size: 30px;
 		font-weight: 900;
 		letter-spacing: 0.75px;
