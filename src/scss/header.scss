@@ -328,7 +328,7 @@
 	font-size: 12px;
 	//Mob-First md1+px
 	@media (max-width: ($md4+px)) {
-		max-height: 00px;
+		height: 0px;
 		// display: none;
 	}
 	// .bottom-header__container

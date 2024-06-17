@@ -88,11 +88,20 @@ body {
 .page {
 	flex: 1 1 auto;
 	background-color: rgba(0, 0, 0, 0.3);
-	padding: 100px 0px 0px 0px;
+	padding: 75px 0px 0px 0px;
 	//Mob-First md3+px
-	@media (min-width: ($md4+px)) {
-		padding: 160px 0px 0px 0px;
+	@media (min-width: 480px) {
+		padding: 85px 0px 0px 0px;
 	}
+	//Mob-First md4+px
+	@media (min-width: ($md4+px)) {
+		padding: 150px 0px 0px 0px;
+	}
+	//Mob-First md3+px
+	@media (min-width: ($md3+px)) {
+		padding: 170px 0px 0px 0px;
+	}
+
 	// .page__container
 	&__container {
 		//Mob-First md2+px
@@ -105,12 +114,15 @@ body {
 		flex: 0 0 260px;
 		position: relative;
 		z-index: 3;
-		//PC-First md2+px
 	}
 	// .page__menu
 	&__menu {
+		//PC-First md2+px
 		@media (max-width: ($md2+px)) {
 			margin: 0px 0px 22px 0px;
+		}
+		@media (max-width: 640px) {
+			margin: 0px 0px 12px 0px;
 		}
 	}
 	// .page__content
@@ -145,6 +157,10 @@ body {
 		display: flex;
 		padding: 20px;
 		align-items: center;
+		//PC-First md4+px
+		@media (max-width: 480px) {
+			padding: 10px;
+		}
 	}
 	// .menu-page__title
 	&__title {
@@ -156,6 +172,10 @@ body {
 		// font-family: UniSans;
 		line-height: calc(35 / 30 * 100%);
 		color: #fff;
+		//PC-First
+		@media (max-width: 480px) {
+			font-size: 22px;
+		}
 	}
 	// .menu-page__burger
 	&__burger {
