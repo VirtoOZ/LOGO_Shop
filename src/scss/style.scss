@@ -65,6 +65,10 @@ body {
 	@media (max-width: ($md3+px)) {
 		padding: 0 10px;
 	}
+	//PC-First md4+px
+	@media (max-width: ($md4+px)) {
+		padding: 0px 5px;
+	}
 }
 //</ОСНОВНАЯ СЕТКА>=================================
 
@@ -113,7 +117,7 @@ body {
 	&__side {
 		flex: 0 0 260px;
 		position: relative;
-		z-index: 3;
+		z-index: 9;
 	}
 	// .page__menu
 	&__menu {

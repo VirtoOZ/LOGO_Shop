@@ -329,23 +329,20 @@
 	//Mob-First md1+px
 	@media (max-width: ($md4+px)) {
 		height: 0px;
-		// display: none;
 	}
 	// .bottom-header__container
 	&__container {
 		display: flex;
 		justify-content: space-between;
-		min-height: 63px;
+		height: 63px;
 		align-items: center;
+		//PC-First md4+px
+		@media (max-width: ($md4+px)) {
+			height: 0px;
+		}
 	}
 	& * > a {
-		// line-height: 1.29;
 		color: #999;
-		// display: flex;
-		// align-items: center;
-		// justify-content: center;
-		// min-height: 24px;
-
 		span {
 			border-bottom: 2px dotted #999;
 		}
