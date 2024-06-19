@@ -24,17 +24,30 @@ menuPageBurger.addEventListener("click", function (e) {
 
 //<SIDE-MENU>=================================
 // Функционал который открывается дополнительное подменю с товаром в боковое меню с помощью стрелки
-let menuParents = document.querySelectorAll('.menu-page__parent');
-const submenuItems = document.querySelectorAll('.submenu-page__item');
+if (isMobile.any()) {
+	// обращаемся ко всем ссылкам внутри menu-page__parent
+	let menuParents = document.querySelectorAll('.menu-page__parent>a');
+	for (let index = 0; index < menuParents.length; index++) {
+		const menuParent = menuParents[index];
+		menuParent.addEventListener("click", function (e) {
+			menuParent.parentElement.classList.toggle('_active');
+			// отменить нажатие
+			e.preventDefault();
+		});
+	}
+} else {
+	let menuParents = document.querySelectorAll('.menu-page__parent');
+	const submenuItems = document.querySelectorAll('.submenu-page__item');
 
-for (let index = 0; index < menuParents.length; index++) {
-	const menuParent = menuParents[index];
-	menuParent.addEventListener("mouseenter", function (e) {
-		menuParent.classList.add('_active');
-	});
-	menuParent.addEventListener("mouseleave", function (e) {
-		menuParent.classList.remove('_active');
-	});
+	for (let index = 0; index < menuParents.length; index++) {
+		const menuParent = menuParents[index];
+		menuParent.addEventListener("mouseenter", function (e) {
+			menuParent.classList.add('_active');
+		});
+		menuParent.addEventListener("mouseleave", function (e) {
+			menuParent.classList.remove('_active');
+		});
+	}
 }
 //</SIDE-MENU>=================================
 
@@ -71,9 +84,15 @@ for (let index = 0; index < checkboxCatergories.length; index++) {
 В CSS нужно установить display: none; для родителя.
 */
 // SlideUP
-import { _slideUp } from "./slide.js";
+import { _slideUp } from "./functions.js";
 // SlideDown
-import { _slideDown } from "./slide.js";
+import { _slideDown } from "./functions.js";
 //SlideToggLe
-import { _slideToggle } from "./slide.js";
+import { _slideToggle } from "./functions.js";
 //</ANIM-SLIDE>================================================================
+
+//<isMobile>================================================================
+//Проверка на каком устройстве работаем
+import { isMobile } from "./functions.js";
+
+//</isMobile>================================================================
