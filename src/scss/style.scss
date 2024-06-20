@@ -88,7 +88,7 @@ body {
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>=================================
 
 //<ОСНОВНОЙ БЛОК>=================================
-
+//</.page>======================================================================
 .page {
 	flex: 1 1 auto;
 	background-color: rgba(0, 0, 0, 0.3);
@@ -121,6 +121,7 @@ body {
 	}
 	// .page__menu
 	&__menu {
+		margin: 0px 0px 40px 0px;
 		//PC-First md2+px
 		@media (max-width: ($md2+px)) {
 			margin: 0px 0px 22px 0px;
@@ -149,10 +150,17 @@ body {
 	&__slider {
 		margin: 0px 0px 65px 0px;
 	}
+	// .page__side-news
+	&__side-news {
+		margin: 0px 0px 45px 0px;
+	}
+	// .page__side-reviews
+	&__side-reviews {
+	}
 }
+//</.page>======================================================================
 
-//======================================================================
-
+//<.menu-page>======================================================================
 .menu-page {
 	position: relative;
 	background: url("@img/icons/Left-bar/bg_menu.png") top repeat;
@@ -319,7 +327,9 @@ body {
 		}
 	}
 }
+//</.menu-page>======================================================================
 
+//<.submenu-page>======================================================================
 .submenu-page {
 	//Mob-First md2+px
 	@media (max-width: ($md2+px)) {
@@ -378,6 +388,9 @@ body {
 		}
 	}
 }
+//</.submenu-page>======================================================================
+
+//<.item-product>======================================================================
 .item-product {
 	padding: 15px;
 	position: relative;
@@ -472,8 +485,9 @@ body {
 		}
 	}
 }
+//</.item-product>======================================================================
 
-//======================================================================
+//<.search-page>======================================================================
 .search-page {
 	// padding: 160px 0px 0px 0px;
 	display: flex;
@@ -558,6 +572,9 @@ body {
 		}
 	}
 }
+//</.search-page>======================================================================
+
+//<.categories-search>======================================================================
 .categories-search {
 	background-color: #fff;
 	display: none;
@@ -623,7 +640,172 @@ body {
 		}
 	}
 }
+//</.categories-search>======================================================================
+.side-title {
+	color: #dadada;
+	font-size: 30px;
+	text-transform: uppercase;
+	// font-family: "UniSans";
+	font-weight: 900;
+	letter-spacing: 0.75px;
+	//Mob-First md2+px
+	@media (min-width: ($md2+px)) {
+		&:hover {
+			color: #1ab9ce;
+		}
+	}
+}
+//<.news-side>======================================================================
+.news-side {
+	background-color: #fff;
+	border-radius: 5px;
 
-//=================================
+	// .news-side__title
+	&__title {
+		display: inline-block;
+		// отновительный отступ вниз
+		margin: 0px 0px 25px/30px * 1em 0px;
+	}
+	// .news-side__items
+	&__items {
+	}
+	// .news-side__item
+	&__item {
+		margin: 0px 0px 45px 0px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+//</.news-side>======================================================================
+
+//<.news-item>======================================================================
+.news-item {
+	// .news-item__subtitle
+	&__subtitle {
+		display: inline-block;
+		color: #333333;
+		font-size: 12px;
+		font-weight: 900;
+		line-height: 18px;
+		text-transform: uppercase;
+		margin: 0px 0px 20px/12px * 1em 0px;
+		//Mob-First $md2+px
+		@media (min-width: ($md2+px)) {
+			&:hover {
+				color: #fd8322;
+			}
+		}
+	}
+	// .news-item__body
+	&__body {
+		display: flex;
+	}
+	// .news-item__date
+	&__date {
+		flex: 0 0 30px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 300;
+		color: #d8d8d8;
+		span {
+			display: block;
+			font-size: 24px;
+			font-weight: 900;
+		}
+	}
+	// .news-item__text
+	&__text {
+		color: #666666;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 18px;
+		padding: 0px 0px 0px 15px;
+	}
+}
+//</.news-item>======================================================================
+
+//<.reviews-side>======================================================================
+.reviews-side {
+	// .reviews-side__title
+	background-color: #fff;
+	border-radius: 5px;
+
+	&__title {
+		display: inline-block;
+		// отновительный отступ вниз
+		margin: 0px 0px 20px/30px * 1em 0px;
+	}
+	// .reviews-side__items
+	&__items {
+	}
+	// .reviews-side__item
+	&__item {
+		display: inline-block;
+		margin: 0px 0px 45px 0px;
+		&:last-child {
+			margin: 0;
+		}
+		//Mob-First $md2+px
+		@media (min-width: ($md2+px)) {
+			&:hover {
+				.reviews-side__user,
+				.reviews-side__data {
+					color: #1ab9ce;
+				}
+				.reviews-side__body {
+					border-radius: 5px;
+					color: #fff;
+					&::before {
+						color: #64deee;
+					}
+					background-color: #1ab9ce;
+				}
+			}
+		}
+	}
+	// .reviews-side__header
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin: 0px 0px 10px 0px;
+	}
+	// .reviews-side__user
+	&__user {
+		color: #333;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 18px;
+		text-transform: uppercase;
+	}
+	// .reviews-side__data
+	&__data {
+		color: #999999;
+		font-size: 12px;
+		font-weight: 900;
+		line-height: 18px;
+		text-transform: uppercase;
+	}
+	// .reviews-side__body
+	&__body {
+		position: relative;
+		padding: 15px 8px 15px 30px;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 18px;
+		color: #666;
+		&::before {
+			color: #dadada;
+
+			content: '"';
+			position: absolute;
+			top: 30px;
+			left: 8px;
+			font-weight: 900;
+			font-size: 48px;
+		}
+	}
+}
+//</.reviews-side>======================================================================
 
 //</ОСНОВНОЙ БЛОК>=================================
