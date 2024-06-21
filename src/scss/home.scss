@@ -166,6 +166,8 @@
 .products-slider {
 	// .products-slider__header
 	&__header {
+		display: flex;
+		justify-content: space-between;
 	}
 	// .products-slider__title
 	&__title {
@@ -183,9 +185,13 @@
 .items-products {
 	// .items-products__column
 	&__column {
+		display: flex;
+		flex-wrap: wrap;
+		// flex-direction: column;
 	}
 }
 .item-product {
+	flex: 0 1 33.333%;
 	// .item-product__labels
 	&__labels {
 	}
