@@ -136,14 +136,53 @@ if (document.querySelector('.mainslider')) {
 	for (let index = 0; index < mainsliderImages.length; index++) {
 		const mainsliderImage = mainsliderImages[index].querySelector('img').getAttribute('src');
 		// console.log(mainsliderImage);
-
 		mainsliderDotts[index].style.backgroundImage = "url('" + mainsliderImage + "')";
 	}
+}
 
 
-
-
-
+if (document.querySelector('.products-slider')) {
+	let mainSwiper = new Swiper('.products-slider__item', {
+		// slideToClickedSlide: false,
+		observer: true,
+		observeParents: false,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: true,
+		speed: 800,
+		watchOverflow: 0,
+		// loop: true,
+		// loopAdditionalSlides: 2,
+		// preloadImages: true,
+		// parallax: true,
+		// effect: 'fade',
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: true,
+		// },
+		//touchRatio: 0,
+		//simulateTouch: false,
+		// Lazy: true,
+		// Dotts
+		/* pagination: {
+			el: '.mainslider__dotts',
+			clickable: true,
+		}, */
+		// Arrows
+		navigation: {
+			nextEl: '.products-slider__arrow_next',
+			prevEl: '.products-slider__arrow_prev',
+		},
+		/* 		on: {
+					lazyImageReady: function () {
+						ibg();
+					},
+				}, */
+		// And if we need scrollbar
+		//scroLLbar: {
+		// el: '.swiper-scrollbar',
+		// }
+	})
 }
 
 /* //Инициализация и Настройки слайдера 2
