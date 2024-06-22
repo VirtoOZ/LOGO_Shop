@@ -76,7 +76,7 @@ if (document.querySelector('.mainslider')) {
 		spaceBetween: 30,
 		autoHeight: true,
 		speed: 800,
-		watchOverflow: 0,
+		// watchOverflow: 1,
 		// loop: true,
 		// loopAdditionalSlides: 2,
 		// preloadImages: true,
@@ -142,7 +142,7 @@ if (document.querySelector('.mainslider')) {
 
 
 if (document.querySelector('.products-slider')) {
-	let mainSwiper = new Swiper('.products-slider__item', {
+	let productsSlider = new Swiper('.products-slider__item', {
 		// slideToClickedSlide: false,
 		observer: true,
 		observeParents: false,
@@ -150,7 +150,7 @@ if (document.querySelector('.products-slider')) {
 		spaceBetween: 0,
 		autoHeight: true,
 		speed: 800,
-		watchOverflow: false,
+		// watchOverflow: true,
 		// loop: true,
 		// loopAdditionalSlides: 2,
 		// preloadImages: true,
