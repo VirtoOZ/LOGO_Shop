@@ -150,7 +150,7 @@ if (document.querySelector('.products-slider')) {
 		spaceBetween: 0,
 		autoHeight: true,
 		speed: 800,
-		watchOverflow: 0,
+		watchOverflow: false,
 		// loop: true,
 		// loopAdditionalSlides: 2,
 		// preloadImages: true,
@@ -164,10 +164,11 @@ if (document.querySelector('.products-slider')) {
 		//simulateTouch: false,
 		// Lazy: true,
 		// Dotts
-		/* pagination: {
-			el: '.mainslider__dotts',
-			clickable: true,
-		}, */
+		pagination: {
+			el: '.products-slider__info',
+			// clickable: true,
+			type: 'fraction',
+		},
 		// Arrows
 		navigation: {
 			nextEl: '.products-slider__arrow_next',
@@ -182,7 +183,7 @@ if (document.querySelector('.products-slider')) {
 		//scroLLbar: {
 		// el: '.swiper-scrollbar',
 		// }
-	})
+	});
 }
 
 /* //Инициализация и Настройки слайдера 2
