@@ -140,9 +140,9 @@ if (document.querySelector('.mainslider')) {
 	}
 }
 
-
+//Инициализация и Настройки слайдера 2
 if (document.querySelector('.products-slider')) {
-	let productsSlider = new Swiper('.products-slider__item', {
+	let productsSlider = new Swiper('.products-slider__body', {
 		// slideToClickedSlide: false,
 		observer: true,
 		observeParents: false,
@@ -173,6 +173,52 @@ if (document.querySelector('.products-slider')) {
 		navigation: {
 			nextEl: '.products-slider__arrow_next',
 			prevEl: '.products-slider__arrow_prev',
+		},
+		/* 		on: {
+					lazyImageReady: function () {
+						ibg();
+					},
+				}, */
+		// And if we need scrollbar
+		//scroLLbar: {
+		// el: '.swiper-scrollbar',
+		// }
+	});
+}
+
+//Инициализация и Настройки слайдера 3
+if (document.querySelector('.brands-slider')) {
+	let brandsSlider = new Swiper('.brands-slider__body', {
+		// slideToClickedSlide: false,
+		observer: true,
+		observeParents: false,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: true,
+		speed: 800,
+		// watchOverflow: true,
+		// loop: true,
+		// loopAdditionalSlides: 2,
+		// preloadImages: true,
+		// parallax: true,
+		// effect: 'fade',
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: true,
+		// },
+		//touchRatio: 0,
+		//simulateTouch: false,
+		// Lazy: true,
+		// Dotts
+		/* 		pagination: {
+					el: '.products-slider__info',
+					// clickable: true,
+					type: 'fraction',
+				}, */
+		// Arrows
+		navigation: {
+			nextEl: '.brands-slider__arrow_next',
+			prevEl: '.brands-slider__arrow_prev',
 		},
 		/* 		on: {
 					lazyImageReady: function () {
