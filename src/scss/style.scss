@@ -96,8 +96,7 @@ body {
 	padding: 75px 0px 0px 0px;
 	// .page__container
 	&__container {
-		padding: 0px 0px 20px 0px;
-		//Mob-First md2+px
+		// padding: 0px 0px 20px 0px;
 		@media (min-width: ($md2+px)) {
 			display: flex;
 		}
@@ -121,12 +120,11 @@ body {
 	}
 	// .page__content
 	&__content {
-		min-width: 0;
-		flex: 1 1 auto;
-		// margin: 160px 0px 0px 0px;
-		//Mob-First md2+px
+		margin: 0px 0px 30px 0px;
 		@media (min-width: ($md2+px)) {
 			padding: 0px 0px 0px 30px;
+			min-width: 0;
+			flex: 1 1 auto;
 		}
 	}
 	// .page__search
@@ -138,8 +136,6 @@ body {
 	// .page__slider
 	&__slider {
 		margin: 0px 0px 35px 0px;
-
-		//Mob-First md3+px
 		@media (min-width: ($md3+px)) {
 			margin: 0px 0px 65px 0px;
 		}
@@ -160,7 +156,12 @@ body {
 	}
 	// .page__text
 	&__text {
+		margin: 0px 0px 40px 0px;
 	}
+	// .page__info-menu
+	&__info-menu {
+	}
+
 	@media (min-width: 480px) {
 		padding: 85px 0px 0px 0px;
 	}
@@ -1000,5 +1001,72 @@ body {
 	}
 }
 //</.reviews-side>======================================================================
-
+.info-menu {
+	border-top: 3px dashed #dadada;
+	border-bottom: 3px dashed #dadada;
+	padding: 10px 0px;
+	// .info-menu__container
+	&__container {
+	}
+	// .info-menu__body
+	&__body {
+		display: inline-block;
+		@media (max-width: ($md3+px)) {
+			display: flex;
+			// flex-direction: column;
+		}
+	}
+	// .info-menu__line
+	&__line {
+		padding: 15px;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #b0b0b0;
+		&:last-child {
+			border-bottom: 0;
+		}
+		@media (max-width: ($md3+px)) {
+			display: block;
+			flex: 0 1 50%;
+			border: 0;
+		}
+	}
+	// .info-menu__label
+	&__label {
+		font-weight: 900;
+		font-size: 14px;
+		color: #333;
+		margin: 0px 35px 0px 0px;
+		@media (max-width: ($md3+px)) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	// .info-menu__list
+	&__list {
+		@media (min-width: ($md3+px)) {
+			display: flex;
+			align-items: center;
+		}
+		li {
+			margin: 0px 30px 0px 0px;
+			@media (max-width: ($md3+px)) {
+				margin: 0px 0px 5px 0px;
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
+	// .info-menu__link
+	&__link {
+		font-size: 12px;
+		font-weight: 300;
+		color: #1ab9ce;
+		@media (min-width: ($md2+px)) {
+			&:hover {
+				color: #333;
+			}
+		}
+	}
+}
 //</ОСНОВНОЙ БЛОК>=================================
