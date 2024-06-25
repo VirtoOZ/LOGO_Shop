@@ -97,7 +97,6 @@ body {
 	// .page__container
 	&__container {
 		padding: 0px 0px 20px 0px;
-
 		//Mob-First md2+px
 		@media (min-width: ($md2+px)) {
 			display: flex;
@@ -157,16 +156,17 @@ body {
 	}
 	// .page__brands
 	&__brands {
+		margin: 0px 0px 32px 0px;
 	}
-	//Mob-First md3+px
+	// .page__text
+	&__text {
+	}
 	@media (min-width: 480px) {
 		padding: 85px 0px 0px 0px;
 	}
-	//Mob-First md4+px
 	@media (min-width: ($md4+px)) {
 		padding: 150px 0px 0px 0px;
 	}
-	//Mob-First md3+px
 	@media (min-width: ($md3+px)) {
 		padding: 170px 0px 0px 0px;
 	}

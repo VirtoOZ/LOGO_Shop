@@ -2,16 +2,14 @@
 
 // ._arrow
 ._arrow {
-	// flex: 0 0 50px;
-	background: url("../img/icons/popular/sl_arrow-right-green.svg") 0 0 / contain no-repeat;
-	width: 40px;
-	height: 30px;
+	width: 43px;
+	height: 33px;
+	background: url("../img/icons/popular/sl_arrow-right-green.svg") center / contain no-repeat;
 	cursor: pointer;
-	//Mob-First $md2+px
 	@media (min-width: ($md2+px)) {
 		&:hover {
 			transform: rotate(-180deg);
-			background: url("../img/icons/popular/sl_arrow-left-orange.svg") 0 0 / contain no-repeat;
+			background: url("../img/icons/products/arrow_orange.png") center / contain no-repeat;
 		}
 	}
 }
@@ -21,7 +19,6 @@
 // ._arrow-prev
 ._arrow_prev {
 	transform: rotate(-180deg);
-	//Mob-First $md2+px
 	@media (min-width: ($md2+px)) {
 		&:hover {
 			transform: rotate(0deg);

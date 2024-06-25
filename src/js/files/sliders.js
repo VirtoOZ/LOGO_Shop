@@ -120,7 +120,8 @@ if (document.querySelector('.brands-slider')) {
 		spaceBetween: 0,
 		// autoHeight: true,
 		speed: 800,
-		loop: true,
+		// loop: true,
+		// loopAdditionalSlides: 1,
 		// Arrows
 		navigation: {
 			nextEl: '.brands-slider__arrow_next',

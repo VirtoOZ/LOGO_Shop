@@ -223,7 +223,6 @@
 	}
 	// .products-slider__body
 	&__body {
-		// margin: 0px -15px;
 	}
 	// .products-slider__slide
 	&__slide {
@@ -232,9 +231,7 @@
 	&__items {
 	}
 }
-
 //</.products-slider>======================================================================
-
 .brands-slider {
 	border-top: 3px dashed #dadada;
 	border-bottom: 3px dashed #dadada;
@@ -242,13 +239,15 @@
 	// .brands-slider__container
 	&__container {
 		position: relative;
+		padding: 0px 40px;
 	}
 	// .brands-slider__body
 	&__body {
-		// padding: 0px 40px;
+		margin: 0px 35px;
+		// padding: 0px 35px;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
 	}
 	// .brands-slider__slide
 	&__slide {
@@ -289,5 +288,82 @@
 				right: 0;
 			}
 		}
+	}
+}
+
+.text-block {
+	// .text-block__container
+	&__container {
+	}
+	// .text-block__body
+	&__body {
+		background: url("../img/icons/bg_text.png") 0 0 repeat;
+		padding: 45px 30px 60px 0px;
+	}
+	// .text-block__title
+	&__title {
+		margin: 0px 0px 30px 30px;
+		font-size: 30px;
+		font-weight: 900;
+		letter-spacing: 0.75px;
+		color: #22b7ca;
+		text-transform: uppercase;
+	}
+	// .text-block__row
+	&__row {
+		display: flex;
+	}
+	// .text-block__column
+	&__column {
+		flex: 0 1 50%;
+		padding: 0px 30px;
+		color: #fff;
+		position: relative;
+		p {
+			margin: 0px 0px 30px 0px;
+			font-size: 12px;
+			line-height: 24px;
+			letter-spacing: 0.3px;
+
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+	}
+	// .text-block__label
+	&__label {
+		text-transform: uppercase;
+		font-weight: 900;
+		margin: 0px 0px 5px 0px;
+	}
+	// .text-block__list
+	&__list {
+		li {
+			// padding: 0px 0px 0px 30px;
+			font-size: 12px;
+			line-height: 24px;
+			letter-spacing: 0.3px;
+			margin: 0px 0px 5px 0px;
+			&:last-child {
+				margin: 0px 0px 5px 0px;
+			}
+			&::before {
+				margin: 0px 17px 0px 7px;
+				content: "";
+				display: inline-block;
+				width: 11px;
+				height: 11px;
+				background: url("../img/icons/arrow_text.png") 0 0 no-repeat;
+			}
+		}
+	}
+	&__image {
+		// background: url("../img/icons/bike.png") 0 0 no-repeat;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		top: 440px;
+		left: 200px;
 	}
 }
