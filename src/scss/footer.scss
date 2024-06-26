@@ -5,12 +5,22 @@
 	}
 	// .footer__body
 	&__body {
-		display: flex;
+		@media (min-width: ($md2+px)) {
+			display: flex;
+			margin: 0px -15px;
+		}
 	}
 	// .footer__column
 	&__column {
-		flex: 0 1 50%;
+		@media (min-width: ($md2+px)) {
+			flex: 0 1 50%;
+			padding: 0px 15px;
+		}
 		margin: 0px 0px 25px 0px;
+		&:first-child {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 	// .footer__block
 	&__block {
@@ -20,10 +30,16 @@
 	}
 	// .footer__bottom
 	&__bottom {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		padding: 10px 0px;
 		border-top: 1px solid #dadada;
+		@media (min-width: 480px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		@media (max-width: 480px) {
+			text-align: center;
+		}
 	}
 	// .footer__copy
 	&__copy {
@@ -32,16 +48,22 @@
 		font-weight: 300;
 		line-height: 1.5;
 		color: #999;
+		@media (max-width: 480px) {
+			margin: 0px 0px 10px 0px;
+		}
 	}
 	// .footer__social
 	&__social {
-		padding: 15px 7.5px;
 	}
 	// .footer__payments
 	&__payments {
 		display: flex;
 		justify-content: flex-start;
 		margin: 0px -12px;
+
+		@media (max-width: 480px) {
+			justify-content: center;
+		}
 	}
 	// .footer__payment
 	&__payment {
@@ -54,30 +76,49 @@
 }
 
 .block-footer {
-	display: flex;
-	flex: 1 1 auto;
 	margin: 0px 0px 20px 0px;
+	@media (min-width: 480px) {
+		display: flex;
+		flex: 1 1 auto;
+	}
+
 	// .block-footer__column
 	&__column {
+		&:first-child {
+			flex: 0 0 165px;
+			margin: 0px 0px 10px 0px;
+			@media (max-width: 480px) {
+				text-align: center;
+			}
+		}
+		&:last-child {
+			flex: 1 1 auto;
+			margin: 0px 0px 0px 0px;
+			@media (min-width: 480px) {
+				padding: 0px 0px 0px 45px;
+			}
+		}
 	}
 	// .block-footer__phones
 	&__phones {
-		position: relative;
-		padding: 0px 0px 0px 40px;
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 20px;
-			height: 25px;
-
-			background: url("../img/icons/footer/phone.png") 0 0 no-repeat;
-		}
 		font-size: 14px;
 		font-weight: 900;
-		line-height: 1.29;
+		p {
+			margin: 0px 0px 10px 0px;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+		@media (min-width: 480px) {
+			background: url("../img/icons/footer/phone.png") left no-repeat;
+			padding: 0px 0px 0px 34px;
+		}
+		@media (max-width: 480px) {
+			font-size: 18px;
+			margin: 0px 0px 30px 0px;
+		}
 	}
+
 	// .block-footer__phone
 	&__phone {
 		color: #333;
@@ -87,38 +128,86 @@
 	}
 }
 .logo-footer {
+	display: inline-block;
+	margin: 0px 0px 30px 0px;
 }
 .delivery-footer {
+	@media (max-width: 480px) {
+		text-align: center;
+	}
 	// .delivery-footer__title
 	&__title {
+		color: #999;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 0.35px;
+		font-weight: 900;
+		margin: 0px 0px 10px 0px;
 	}
 	// .delivery-footer__items
 	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: space-between;
+		align-items: center;
+		margin: 0px -15px;
+		@media (max-width: 480px) {
+			justify-content: center;
+		}
 	}
 	// .delivery-footer__item
 	&__item {
+		padding: 15px;
 	}
 }
 .widgets-footer {
-	display: flex;
-	justify-content: flex-end;
 	margin: 0px -3.5px;
+	display: flex;
+	@media (min-width: ($md2+px)) {
+		justify-content: flex-end;
+	}
+	@media (max-width: 480px) {
+		display: block;
+		text-align: center;
+	}
 	// .widgets-footer__column
 	&__column {
 		padding: 0px 3.5px;
 		flex: 0 1 50%;
 		img {
 			max-width: 100%;
+			@media (max-width: 480px) {
+				// кривая картинка
+				margin: 0px 0px 0px -20px;
+			}
+		}
+		@media (max-width: 480px) {
+			margin: 0px 0px 20px 0px;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
 		}
 	}
 }
 .social-footer {
+	@media (min-width: 480px) {
+		margin: 0px -7.5px;
+	}
 	// .social-footer__item
 	&__item {
+		// padding: 10px 0px;
 		display: inline-block;
+		@media (min-width: 480px) {
+			padding: 15px 7.5px;
+		}
+	}
+	&__image {
+		margin: 0px 5px;
 		width: 30px;
 		height: 30px;
-		margin: 0px 7.5px;
+		@media (min-width: 480px) {
+			margin: 0;
+		}
 		img {
 			max-width: 100%;
 		}
