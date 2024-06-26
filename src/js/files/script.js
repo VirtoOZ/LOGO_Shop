@@ -77,6 +77,26 @@ for (let index = 0; index < checkboxCatergories.length; index++) {
 }
 //</SELECT-MENU>=================================
 
+//<FILTER>=================================
+var startSlider = document.getElementById('slider-start');
+
+noUiSlider.create(startSlider, {
+	start: [20, 80],
+	tooltips: [false, wNum({ decimals: 1 }), true],
+	// connect: true,
+	range: {
+		'min': [0],
+		'max': [100],
+	}
+});
+
+setButton.addEventListener('click', function () {
+	animatedSlider.noUiSlider.set(60);
+	unAnimatedSlider.noUiSlider.set(60);
+});
+
+//</FILTER>=================================
+
 //<ANIM-SLIDE>================================================================
 /*   Анимированное плавное открытие и закрытие блока.
 Может применяться к меню или выпадающему списку
@@ -96,3 +116,4 @@ import { _slideToggle } from "./functions.js";
 import { isMobile } from "./functions.js";
 
 //</isMobile>================================================================
+
