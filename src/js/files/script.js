@@ -79,21 +79,36 @@ for (let index = 0; index < checkboxCatergories.length; index++) {
 
 //<FILTER>=================================
 if (document.querySelector('.filter')) {
-	const priceSlider = document.querySelector('.price-filter');
+	const priceSlider = document.querySelector('.price-filter__slider');
 	noUiSlider.create(priceSlider, {
-		start: [20, 80],
+		start: [0, 200000],
 		connect: true,
+		tooltips: true,
 		range: {
 			'min': 0,
-			'max': 100
+			'max': 200000
 		},
 
 	});
+
+	// передача значений из поля в слайдер
+	const priceStart = document.getElementById('price-start');
+	const priceEnd = document.getElementById('price-end');
+	priceStart.addEventListener('change', setPriceValues);
+	priceEnd.addEventListener('change', setPriceValues);
+
+	function setPriceValues() {
+		let priceStartValue;
+		let priceEndValue;
+		if (priceStart.value != '') {
+			priceStartValue = priceStart.value;
+		}
+		if (priceEnd.value != '') {
+			priceEndValue = priceEnd.value;
+		}
+		priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
+	}
 }
-// setButton.addEventListener('click', function () {
-// 	animatedSlider.noUiSlider.set(60);
-// 	unAnimatedSlider.noUiSlider.set(60);
-// });
 //</FILTER>=================================
 
 //<ANIM-SLIDE>================================================================
