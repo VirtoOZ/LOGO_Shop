@@ -78,22 +78,24 @@ for (let index = 0; index < checkboxCatergories.length; index++) {
 //</SELECT-MENU>=================================
 
 //<FILTER>=================================
-var startSlider = document.getElementById('slider-start');
+// var startSlider = document.getElementById('slider-start');
+// let startSlider = document.querySelector('.price-filter');
 
-noUiSlider.create(startSlider, {
+let priceSlider = document.getElementById('.price-filter');
+
+noUiSlider.create(priceSlider, {
 	start: [20, 80],
-	tooltips: [false, wNum({ decimals: 1 }), true],
 	// connect: true,
 	range: {
-		'min': [0],
-		'max': [100],
-	}
+		'min': 0,
+		'max': 100
+	},
 });
 
-setButton.addEventListener('click', function () {
-	animatedSlider.noUiSlider.set(60);
-	unAnimatedSlider.noUiSlider.set(60);
-});
+// setButton.addEventListener('click', function () {
+// 	animatedSlider.noUiSlider.set(60);
+// 	unAnimatedSlider.noUiSlider.set(60);
+// });
 
 //</FILTER>=================================
 
