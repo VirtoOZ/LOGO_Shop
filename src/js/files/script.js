@@ -123,29 +123,26 @@ import { isMobile } from "./functions.js";
 //</isMobile>================================================================
 
 //<SPOLLER>=================================
-// const spollers = document.querySelector('._spollers');
 const spoller = document.querySelector('._spoller');
 const bodySpoller = document.querySelector('.section-filter__body_spoller');
-// console.log(bodySpoller);
-
-spoller.addEventListener("click", function (e) {
-	// 	// menuPageBody.classList.toggle('_active');
-	spoller.classList.toggle('_active');
-	_slideToggle(bodySpoller, 500);
-});
-
-
+if (spoller) {
+	console.log('yes');
+	spoller.addEventListener("click", function (e) {
+		spoller.classList.toggle('_active');
+		_slideToggle(bodySpoller, 500);
+	});
+}
 //</SPOLLER>=================================
+
 //<FILTER>=================================
 if (isMobile.any()) {
 	const filterTitle = document.querySelector('.filter__title');
-	console.log(filterTitle);
-
-	filterTitle.addEventListener("click", function (e) {
-		filterTitle.classList.toggle('_active');
-		console.log(filterTitle.nextElementSibling);
-
-		_slideToggle(filterTitle.nextElementSibling, 500);
-	});
+	if (filterTitle) {
+		console.log('yes');
+		filterTitle.addEventListener("click", function (e) {
+			filterTitle.classList.toggle('_active');
+			_slideToggle(filterTitle.nextElementSibling, 500);
+		});
+	}
 }
 //</FILTER>=================================
