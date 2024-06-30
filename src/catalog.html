@@ -204,62 +204,239 @@
 							</ul>
 						</div>
 					</nav>
-					<div class="filter">
+					<form action="#" class="filter">
 						<div class="filter__title">Фильтр товаров</div>
-						<div class="filter__body">
-							<div class="filter__section section-filter">
-								<div class="section-filter__title">Цена (руб.):</div>
-								<div class="section-filter__body">
-									<div class="price-filter">
-										<!-- это noUiSlide -->
-										<div class="price-filter__slider"></div>
-										<div class="price-filter__values values-price-filter">
-											<div class="values-price-filter__column">
-												<div class="values-price-filter__label">от</div>
-												<div class="values-price-filter__input">
-													<input id="price-start" autocomplete="off" type="text" name="form[]"
-														class="input">
+						<div class="filter__content">
+							<div class="filter__body _spollers">
+								<div class="filter__section section-filter">
+									<div class="section-filter__title">Цена (руб.):</div>
+									<div class="section-filter__body">
+										<div class="price-filter">
+											<!-- это noUiSlide -->
+											<div class="price-filter__slider"></div>
+											<div class="price-filter__values values-price-filter">
+												<div class="values-price-filter__column">
+													<div class="values-price-filter__label">от</div>
+													<div class="values-price-filter__input">
+														<input id="price-start" autocomplete="off" type="text" name="form[]"
+															class="input">
+													</div>
+												</div>
+												<div class="values-price-filter__column">
+													<div class="values-price-filter__label">до</div>
+													<div class="values-price-filter__input">
+														<input id="price-end" autocomplete="off" type="text" name="form[]"
+															class="input">
+													</div>
 												</div>
 											</div>
-											<div class="values-price-filter__column">
-												<div class="values-price-filter__label">до</div>
-												<div class="values-price-filter__input">
-													<input id="price-end" autocomplete="off" type="text" name="form[]" class="input">
-												</div>
-											</div>
+
 										</div>
 
 									</div>
-
+								</div>
+								<div class="filter__section section-filter">
+									<div class="section-filter__title">Товары для сравнения</div>
+									<div class="section-filter__body">
+										<div class="compare-filter">
+											<div class="compare-filter__items">
+												<div class="compare-filter__item">
+													<a href="#" class="compare-filter__link">Nordick C100</a>
+													<a href="#" class="compare-filter__remove"></a>
+												</div>
+												<div class="compare-filter__item">
+													<a href="#" class="compare-filter__link">Clear Fit Luxury LT.20</a>
+													<a href="#" class="compare-filter__remove"></a>
+												</div>
+												<div class="compare-filter__item">
+													<a href="#" class="compare-filter__link">Ammity ATM 720 TFT+</a>
+													<a href="#" class="compare-filter__remove"></a>
+												</div>
+											</div>
+											<div class="compare-filter__footer">
+												<a href="#" class="compare-filter__button"><span></span>Сравнить</a>
+												<a href="#" class="compare-filter__clean"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="filter__section section-filter ">
+									<div class="section-filter__title _spoller">Производитель<span></span></div>
+									<div class="section-filter__body section-filter__body_spoller">
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>Clear-fit</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>Diadora</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>Hasttings</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>Carbon-fitness</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>Nordic Track</span></span>
+										</label>
+									</div>
+								</div>
+								<div class="filter__section section-filter ">
+									<div class="section-filter__title _spoller">Мощность двигателя<span></span></div>
+									<div class="section-filter__body section-filter__body_spoller">
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>12</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>14</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>16</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>18</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>20</span></span>
+										</label>
+									</div>
+								</div>
+								<div class="filter__section section-filter ">
+									<div class="section-filter__title _spoller">Размер бегового полотна<span></span></div>
+									<div class="section-filter__body section-filter__body_spoller">
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>12</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>14</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>16</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>18</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>20</span></span>
+										</label>
+									</div>
+								</div>
+								<div class="filter__section section-filter ">
+									<div class="section-filter__title _spoller">Вес пользователя (макс.):<span></span></div>
+									<div class="section-filter__body section-filter__body_spoller">
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>40</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>60</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>80</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>100</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>120</span></span>
+										</label>
+									</div>
+								</div>
+								<div class="filter__section section-filter ">
+									<div class="section-filter__title _spoller">Скорость (макс.):<span></span></div>
+									<div class="section-filter__body section-filter__body_spoller">
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>12</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>14</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>16</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>18</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>20</span></span>
+										</label>
+									</div>
+								</div>
+								<div class="filter__section section-filter ">
+									<div class="section-filter__title">Угол наклона:<span></span></div>
+									<div class="section-filter__body">
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>нет регулировки</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>механическая</span></span>
+										</label>
+										<label class="section-filter__checkbox checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<span class="checkbox__text"><span>электронная</span></span>
+										</label>
+									</div>
 								</div>
 							</div>
-							<div class="filter__section section-filter">
-								<div class="section-filter__title">Товары для сравнения</div>
-								<div class="section-filter__body">
-									<div class="compare-filter">
-										<div class="compare-filter__items">
-											<div class="compare-filter__item">
-												<a href="#" class="compare-filter__link">Nordick C100</a>
-												<a href="#" class="compare-filter__remove"></a>
-											</div>
-											<div class="compare-filter__item">
-												<a href="#" class="compare-filter__link">Clear Fit Luxury LT.20</a>
-												<a href="#" class="compare-filter__remove"></a>
-											</div>
-											<div class="compare-filter__item">
-												<a href="#" class="compare-filter__link">Ammity ATM 720 TFT+</a>
-												<a href="#" class="compare-filter__remove"></a>
-											</div>
-										</div>
-										<div class="compare-filter__footer">
-											<a href="#" class="compare-filter__button"><span></span>Сравнить</a>
-											<a href="#" class="compare-filter__clean"></a>
-										</div>
-									</div>
-								</div>
+							<div class="filter__footer">
+								<button type="submit" class="filter__btn btn">Подобрать</button>
+								<button type="reset" class="filter__btn btn btn_gray">Сбросить</button>
 							</div>
 						</div>
-					</div>
+					</form>
 				</asaid>
 				<div class="page__content">
 					<form action="#" class="page__search search-page">

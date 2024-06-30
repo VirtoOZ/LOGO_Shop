@@ -28,18 +28,28 @@
 	justify-content: center;
 	align-items: center;
 	height: 39px;
-	object-fit: contain;
+	// object-fit: contain;
 	background-color: #f68038;
 	color: #fff;
 	transition: all 0.5s ease 0s;
 	text-transform: uppercase;
 	font-weight: 900;
 	font-size: 12px;
-	line-height: 18px;
-	//Mob-First md3+px
-	@media (min-width: ($md3+px)) {
+	// line-height: 18px;
+	@media (min-width: 992px) {
 		&:hover {
-			background-color: #fc6000;
+			background-color: #b86029;
+			color: #fff;
+		}
+	}
+	// .btn_gray
+	&_gray {
+		background-color: #e6e6e6;
+		color: #666;
+		@media (min-width: ($md2+px)) {
+			&:hover {
+				background-color: #a1a1a1;
+			}
 		}
 	}
 	&._fw {
@@ -95,7 +105,16 @@ textarea.input {
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .checkbox__text::before {
-			background: #fff url("../img/icons/check.svg") center no-repeat;
+			border: 2px solid #009aaf;
+		}
+		&:checked + .checkbox__text::after {
+			content: "";
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			width: 9px;
+			height: 9px;
+			background-color: #53b5de;
 		}
 	}
 	// .checkbox__text
@@ -103,20 +122,20 @@ textarea.input {
 		display: inline-flex;
 		align-items: center;
 		position: relative;
-		font-size: 16px;
-		color: #fff;
-		letter-spacing: -0.3;
-		line-height: calc(20 / 16 * 100%);
+		font-size: 12px;
+		color: #666;
+		// letter-spacing: -0.3;
+		line-height: calc(15 / 12 * 100%);
 		cursor: pointer;
 		&::before {
 			content: "";
 			align-self: flex-start;
 			margin: 0px 14px 0px 0px;
-			flex: 1 1 20px;
+			flex: 0 0 15px;
 			top: 0;
 			left: 0;
-			width: 20px;
-			height: 18px;
+			width: 15px;
+			height: 15px;
 			background-color: #fff;
 			border: 1px solid #a7a9ac;
 		}
@@ -125,7 +144,7 @@ textarea.input {
 		color: #fff;
 		text-decoration: underline;
 		//Mob-First md2+px
-		@media (min-width: ($md2+px)) {
+		@media (min-width: 992px) {
 			&:hover {
 				text-decoration: none;
 			}

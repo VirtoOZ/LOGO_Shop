@@ -10,7 +10,6 @@ if (iconMenu) {//Проверяем есть ли menu__icon
 };
 //</BURGER>=================================
 
-
 //<BURGER SIDE-MENU>=================================
 let menuPageBurger = document.querySelector('.menu-page__burger');
 let menuPageBody = document.querySelector('.menu-page__body');
@@ -20,7 +19,6 @@ menuPageBurger.addEventListener("click", function (e) {
 	_slideToggle(menuPageBody, 500);
 });
 //</BURGER SIDE-MENU>=================================
-
 
 //<SIDE-MENU>=================================
 // Функционал который открывается дополнительное подменю с товаром в боковое меню с помощью стрелки
@@ -38,7 +36,6 @@ if (isMobile.any()) {
 } else {
 	let menuParents = document.querySelectorAll('.menu-page__parent');
 	const submenuItems = document.querySelectorAll('.submenu-page__item');
-
 	for (let index = 0; index < menuParents.length; index++) {
 		const menuParent = menuParents[index];
 		menuParent.addEventListener("mouseenter", function (e) {
@@ -58,9 +55,7 @@ searchTitle.addEventListener("click", function (e) {
 	searchTitle.classList.toggle('_active');
 	_slideToggle(categoriesSearch, 500);
 });
-
 const checkboxCatergories = document.querySelectorAll('.categories-search__checkbox');
-
 for (let index = 0; index < checkboxCatergories.length; index++) {
 	const checkboxCatergory = checkboxCatergories[index];
 	checkboxCatergory.addEventListener("change", function (e) {
@@ -88,15 +83,12 @@ if (document.querySelector('.filter')) {
 			'min': 0,
 			'max': 200000
 		},
-
 	});
-
 	// передача значений из поля в слайдер
 	const priceStart = document.getElementById('price-start');
 	const priceEnd = document.getElementById('price-end');
 	priceStart.addEventListener('change', setPriceValues);
 	priceEnd.addEventListener('change', setPriceValues);
-
 	function setPriceValues() {
 		let priceStartValue;
 		let priceEndValue;
@@ -128,6 +120,32 @@ import { _slideToggle } from "./functions.js";
 //<isMobile>================================================================
 //Проверка на каком устройстве работаем
 import { isMobile } from "./functions.js";
-
 //</isMobile>================================================================
 
+//<SPOLLER>=================================
+// const spollers = document.querySelector('._spollers');
+const spoller = document.querySelector('._spoller');
+const bodySpoller = document.querySelector('.section-filter__body_spoller');
+// console.log(bodySpoller);
+
+spoller.addEventListener("click", function (e) {
+	// 	// menuPageBody.classList.toggle('_active');
+	spoller.classList.toggle('_active');
+	_slideToggle(bodySpoller, 500);
+});
+
+
+//</SPOLLER>=================================
+//<FILTER>=================================
+if (isMobile.any()) {
+	const filterTitle = document.querySelector('.filter__title');
+	console.log(filterTitle);
+
+	filterTitle.addEventListener("click", function (e) {
+		filterTitle.classList.toggle('_active');
+		console.log(filterTitle.nextElementSibling);
+
+		_slideToggle(filterTitle.nextElementSibling, 500);
+	});
+}
+//</FILTER>=================================

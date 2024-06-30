@@ -38,7 +38,6 @@ if (sliders.length > 0) {
 	sliders_bild_callback();
 	// }
 }
-
 function sliders_bild_callback(params) { }
 /* const sliderScrollItems = document.querySelectorAll('._swiper_scroll');
 if (sliderScrollItems.length > 0) {
@@ -64,7 +63,6 @@ if (sliderScrollItems.length > 0) {
 	}
 }
  */
-
 //Инициализация и Настройки слайдера 1
 if (document.querySelector('.mainslider')) {
 	let mainSwiper = new Swiper('.mainslider__body', {
@@ -87,7 +85,6 @@ if (document.querySelector('.mainslider')) {
 		mainsliderDotts[index].style.backgroundImage = "url('" + mainsliderImage + "')";
 	}
 }
-
 //Инициализация и Настройки слайдера 2
 if (document.querySelector('.products-slider')) {
 	let productsSlider = new Swiper('.products-slider__body', {
@@ -110,7 +107,6 @@ if (document.querySelector('.products-slider')) {
 		},
 	});
 }
-
 //Инициализация и Настройки слайдера 3
 if (document.querySelector('.brands-slider')) {
 	let brandsSlider = new Swiper('.brands-slider__body', {
@@ -148,7 +144,6 @@ if (document.querySelector('.brands-slider')) {
 		},
 	});
 }
-
 /* //шаблон с Настройками слайдера
 if (document.querySelector('.slider-rooms__body')) {
 	new Swiper('.slider-rooms__body', {
