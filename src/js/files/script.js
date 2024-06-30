@@ -126,7 +126,6 @@ import { isMobile } from "./functions.js";
 const spoller = document.querySelector('._spoller');
 const bodySpoller = document.querySelector('.section-filter__body_spoller');
 if (spoller) {
-	console.log('yes');
 	spoller.addEventListener("click", function (e) {
 		spoller.classList.toggle('_active');
 		_slideToggle(bodySpoller, 500);
@@ -138,7 +137,6 @@ if (spoller) {
 if (isMobile.any()) {
 	const filterTitle = document.querySelector('.filter__title');
 	if (filterTitle) {
-		console.log('yes');
 		filterTitle.addEventListener("click", function (e) {
 			filterTitle.classList.toggle('_active');
 			_slideToggle(filterTitle.nextElementSibling, 500);

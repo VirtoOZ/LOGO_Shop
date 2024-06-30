@@ -174,6 +174,37 @@ body {
 	}
 }
 //======================================================================
+.breadcrumbs {
+	overflow: auto;
+	margin: 0px 0px 20px 0px;
+	height: 20px;
+	// .breadcrumbs__list
+	&__list {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		li {
+			margin: 0px 10px 0px 0px;
+			padding: 0px 20px 0px 0px;
+			background: url("../img/icons/arrow_text.png") right / 10px no-repeat;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+				background: none;
+			}
+		}
+	}
+	// .breadcrumbs__link
+	&__link {
+		color: #1ab9ce;
+		text-decoration: underline;
+	}
+	// .breadcrumbs__item
+	&__item {
+		color: 999px;
+		font-weight: 300;
+	}
+}
+//======================================================================
 .menu-page {
 	position: relative;
 	background: url("@img/icons/Left-bar/bg_menu.png") top repeat;

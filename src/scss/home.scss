@@ -176,7 +176,7 @@
 		font-weight: 900;
 		letter-spacing: 0.9px;
 		color: #dadada;
-		//Mob-First md3+px
+		text-transform: uppercase;
 		@media (max-width: ($md3+px)) {
 			text-align: center;
 			margin: 0px 0px 10px 0px;

@@ -1,14 +1,18 @@
 //======================================================================
 .filter {
 	border: 4px solid #72c9d4;
+	margin: 0px 0px 20px 0px;
 	// .filter__title
 	&__title {
-		padding: 25px 15px 5px 15px;
+		padding: 25px 15px 25px 15px;
 		color: #36949f;
 		font-weight: 900;
 		font-size: 24px;
 		transition: all 0.3s ease 0s;
 		text-transform: uppercase;
+		&._active {
+			color: #f68038;
+		}
 		@media (max-width: ($md2+px)) {
 			padding: 25px 15px 25px 15px;
 			&._active {
@@ -23,6 +27,9 @@
 	&__content {
 		@media (max-width: ($md2+px)) {
 			display: none;
+		}
+		@media (min-width: ($md2+px)) {
+			display: block;
 		}
 	}
 	// .filter__section
@@ -289,4 +296,69 @@
 		background: #e6e6e6 url("../img/icons/catalog/trash.png") center no-repeat;
 	}
 }
+//======================================================================
+.catalog {
+	// .catalog__title
+	&__title {
+		color: #dadada;
+		font-size: 30px;
+		font-weight: 900;
+		text-transform: uppercase;
+		margin: 0px 0px 20px 0px;
+	}
+	// .catalog__actions
+	&__actions {
+	}
+}
+.actions-catalog {
+	background-color: #f3f3f3;
+	display: flex;
+	align-items: center;
+	// .actions-catalog__order
+	&__order {
+		flex: 1 1 auto;
+	}
+	// .actions-catalog__view
+	&__view {
+	}
+}
+.order-catalog {
+	align-items: center;
+	display: flex;
+	padding: 10px 20px;
+	// .order-catalog__label
+	&__label {
+		margin: 0px 20px 0px 0px;
+		font-size: 14px;
+		font-weight: 900;
+		color: #333;
+	}
+	// .order-catalog__select
+	&__select {
+	}
+}
+
+.view-catalog {
+	display: flex;
+	padding: 5px 15px;
+	// .view-catalog__item
+	&__item {
+		margin: 0px 7px 0px 0px;
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+		// .view-catalog__item_grid
+		&_grid {
+			background: url("../img/icons/catalog/grid.png") 0 0 no-repeat;
+		}
+		// .view-catalog__item_list
+		&_list {
+			background: url("../img/icons/catalog/list.png") 0 0 no-repeat;
+		}
+	}
+}
+
 //======================================================================
