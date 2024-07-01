@@ -2698,16 +2698,28 @@ ol.counter li::before {
 .actions-catalog__order {
   flex: 1 1 auto;
 }
-.order-catalog {
-  align-items: center;
-  display: flex;
-  padding: 10px 20px;
+@media (max-width: 540px) {
+  .actions-catalog__order {
+    margin: 0px 0px 15px 0px;
+  }
+}
+@media (min-width: 540px) {
+  .order-catalog {
+    align-items: center;
+    display: flex;
+    padding: 10px 20px;
+  }
 }
 .order-catalog__label {
   margin: 0px 20px 0px 0px;
   font-size: 14px;
   font-weight: 900;
   color: #333;
+}
+@media (max-width: 540px) {
+  .order-catalog__label {
+    margin: 0px 0px 10px 0px;
+  }
 }
 .view-catalog {
   display: flex;
@@ -2728,7 +2740,6 @@ ol.counter li::before {
 .view-catalog__item_list {
   background: url("../img/icons/catalog/list.png") 0 0 no-repeat;
 }
-
 .page {
   flex: 1 1 auto;
   padding: 75px 0px 0px 0px;
