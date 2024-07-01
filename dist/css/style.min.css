@@ -2740,6 +2740,12 @@ ol.counter li::before {
 .view-catalog__item_list {
   background: url("../img/icons/catalog/list.png") 0 0 no-repeat;
 }
+@media (max-width: 540px) {
+  .view-catalog__item {
+    margin: 1px 2px;
+  }
+}
+
 .page {
   flex: 1 1 auto;
   padding: 75px 0px 0px 0px;
