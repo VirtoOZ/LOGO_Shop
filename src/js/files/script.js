@@ -123,14 +123,17 @@ import { isMobile } from "./functions.js";
 //</isMobile>================================================================
 
 //<SPOLLER>=================================
-const spoller = document.querySelector('._spoller');
-const bodySpoller = document.querySelector('.section-filter__body_spoller');
-if (spoller) {
-	spoller.addEventListener("click", function (e) {
+let spollers = document.querySelector('._spollers');
+spollers.addEventListener("click", function (e) {
+	// нажатый элемент
+	let targetItem = e.target;
+	// нажатый элемент является или его родители ._spoller
+	let spoller = targetItem.closest('._spoller');
+	if (spoller) {
 		spoller.classList.toggle('_active');
-		_slideToggle(bodySpoller, 500);
-	});
-}
+		_slideToggle(spoller.nextElementSibling, 500);
+	}
+});
 //</SPOLLER>=================================
 
 //<FILTER>=================================

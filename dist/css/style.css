@@ -3262,6 +3262,9 @@ ol.counter li::before {
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
+.hover-item-product__header {
+  display: flex;
+}
 .hover-item-product__header-title {
   font-size: 16px;
   font-weight: 300;
@@ -3269,8 +3272,7 @@ ol.counter li::before {
   color: #c2c2c2;
   margin: 0px 0px 25px 0px;
 }
-.hover-item-product__header-title span {
-  display: block;
+.hover-item-product__header-title p {
   color: #fff;
   font-weight: 900;
   margin: 0px 0px 5px 0px;
@@ -3312,10 +3314,10 @@ ol.counter li::before {
   font-size: 16px;
 }
 .hover-item-product__compare {
-  height: 25px;
+  display: inline-block;
+  height: 21px;
   background: url("../img/icons/catalog/compare.png") left no-repeat;
   padding: 0px 0px 0px 35px;
-  display: inline-block;
 }
 .hover-item-product__compare span {
   font-weight: 300;
@@ -3356,6 +3358,9 @@ ol.counter li::before {
 }
 .options-item-product__label {
   margin: 0px 0px 3px 0px;
+}
+.options-item-product__body {
+  margin: 25px 0px 0px 0px;
 }
 .options-item-product__value {
   font-weight: 900;
