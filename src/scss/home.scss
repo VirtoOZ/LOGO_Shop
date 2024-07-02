@@ -186,8 +186,6 @@
 	&__arrows {
 		display: flex;
 		align-items: center;
-
-		//PC-First md3+px
 		@media (max-width: ($md3+px)) {
 			justify-content: center;
 		}
@@ -269,7 +267,6 @@
 		// .brands-slider__arrow_prev
 		&_prev {
 			left: 10px;
-			//Mob-First md1+px
 			@media (min-width: ($md1+px)) {
 				left: 0;
 			}
@@ -277,7 +274,6 @@
 		// .brands-slider__arrow_next
 		&_next {
 			right: 10px;
-			//Mob-First md1+px
 			@media (min-width: ($md1+px)) {
 				right: 0;
 			}
