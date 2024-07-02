@@ -3262,11 +3262,6 @@ ol.counter li::before {
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
-@media (min-width: 992px) {
-  .hover-item-product:hover {
-    opacity: 1;
-  }
-}
 .hover-item-product__header-title {
   font-size: 16px;
   font-weight: 300;
@@ -3295,6 +3290,9 @@ ol.counter li::before {
     background: url("../img/icons/popular/card-orange.webp") center/cover no-repeat;
   }
 }
+.hover-item-product__cart_catalog {
+  margin: 0;
+}
 .hover-item-product__footer {
   display: flex;
   flex-wrap: wrap;
@@ -3312,6 +3310,17 @@ ol.counter li::before {
 }
 .hover-item-product__old-price:after {
   font-size: 16px;
+}
+.hover-item-product__compare {
+  height: 25px;
+  background: url("../img/icons/catalog/compare.png") left no-repeat;
+  padding: 0px 0px 0px 35px;
+  display: inline-block;
+}
+.hover-item-product__compare span {
+  font-weight: 300;
+  border-bottom: 1px dashed;
+  color: #fff;
 }
 .hover-item-product__stock {
   display: flex;
@@ -3332,6 +3341,11 @@ ol.counter li::before {
 }
 .hover-item-product__price:after {
   font-size: 18px;
+}
+@media (min-width: 992px) {
+  .hover-item-product:hover {
+    opacity: 1;
+  }
 }
 
 .options-item-product__item {
