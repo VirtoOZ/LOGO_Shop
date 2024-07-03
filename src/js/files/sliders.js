@@ -146,6 +146,18 @@ if (document.querySelector('.brands-slider')) {
 
 //Инициализация и Настройки слайдера 4
 if (document.querySelector('.images-product')) {
+
+	//Инициализация и Настройки слайдера 5
+	let imagesSubSlider = new Swiper('.images-product__subslider', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 4,
+		spaceBetween: 0,
+		// autoHeight: true,
+		speed: 800,
+		// loop: true,
+		// loopAdditionalSlides: 1,
+	});
 	let imagesSlider = new Swiper('.images-product__mainslider', {
 		observer: true,
 		observeParents: false,
@@ -155,9 +167,12 @@ if (document.querySelector('.images-product')) {
 		speed: 800,
 		// loop: true,
 		// loopAdditionalSlides: 1,
-		// Arrows
+		thumbs: {
+			swiper: imagesSubSlider
+		},
 	});
 }
+
 /* //шаблон с Настройками слайдера
 if (document.querySelector('.slider-rooms__body')) {
 	new Swiper('.slider-rooms__body', {
