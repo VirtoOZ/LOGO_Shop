@@ -2838,6 +2838,39 @@ ol.counter li::before {
   color: #333;
   margin: 0px 15px 0px 0px;
 }
+.product__title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #333;
+  margin: 0px 0px 20px 0px;
+  text-transform: uppercase;
+}
+.product__title span {
+  display: block;
+  margin: 5px 0px 0px 0px;
+  font-size: 30px;
+  color: #dadada;
+}
+.product__content {
+  display: flex;
+  margin: 0px -15px;
+}
+.product__images {
+  padding: 0px 15px;
+  flex: 0 0 42.5%;
+  min-width: 0%;
+}
+.product__body {
+  flex: 1 1 auto;
+  padding: 0px 15px;
+}
+
+.images-product__mainslide {
+  height: 308px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .page {
   flex: 1 1 auto;
   padding: 75px 0px 0px 0px;
