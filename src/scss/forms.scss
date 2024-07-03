@@ -253,6 +253,11 @@ textarea.input {
 	}
 	//.checkbox__error
 	&__error {
+		.checkbox__text {
+			&::before {
+				border: 1px solid #ee1212;
+			}
+		}
 	}
 }
 //</CHECKBOX>======================================================================

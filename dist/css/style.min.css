@@ -1226,6 +1226,10 @@ textarea.input {
     text-decoration: none;
   }
 }
+.checkbox__error .checkbox__text::before {
+  border: 1px solid #ee1212;
+}
+
 ._arrow {
   width: 43px;
   height: 33px;
@@ -2855,16 +2859,17 @@ ol.counter li::before {
   display: flex;
 }
 .product__images {
-  margin: 0px 0px 0px 30px;
   flex: 0 0 42.5%;
   min-width: 0%;
 }
 .product__body {
   flex: 1 1 auto;
+  margin: 0px 0px 0px 30px;
 }
 
 .images-product__mainslider {
   margin: 0px 0px 15px 0px;
+  border: 1px solid #e4e4e4;
 }
 .images-product__mainslide {
   height: 308px;
@@ -2951,19 +2956,117 @@ ol.counter li::before {
   padding: 0px 10px;
   border-radius: 15px;
 }
+.body-product__actions {
+  margin: 0px 0px 22px 0px;
+}
 .actions-product {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  padding: 15px 0;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  padding: 30px 0;
 }
 .actions-product__row {
   display: flex;
-  justify-content: space-between;
-  margin: 0px -15px;
+  align-items: center;
+  margin: 0px -10px;
 }
 .actions-product__column {
-  padding: 0px 15px;
+  padding: 0px 10px;
+  flex: 1 1 auto;
 }
+.actions-product__price {
+  font-size: 24px;
+  color: #333333;
+  font-weight: 900;
+}
+.actions-product__price:after {
+  font-size: 18px;
+}
+.actions-product__price_old {
+  color: #999;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: line-through;
+  margin: 0px 0px 5px 0px;
+}
+.actions-product__price_old:after {
+  font-size: 16px;
+}
+.actions-product__cart {
+  position: relative;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  padding: 0px 45px 0px 0px;
+}
+.actions-product__cart span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+  background-color: #f3f3f3;
+  padding: 0px 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #999;
+}
+.actions-product__cart::after {
+  content: "";
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/icons/popular/card-orange.webp") right no-repeat;
+}
+
+.cervices-product__title {
+  height: 10px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #333;
+  text-transform: uppercase;
+  margin: 0px 0px 25px 0px;
+}
+.cervices-product__body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px -35px;
+}
+.cervices-product__column {
+  padding: 0px 35px;
+  flex: 0 1 80px;
+}
+.cervices-product__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.cervices-product__image {
+  flex: 1 1 auto;
+  position: relative;
+  margin: 0px 0px 10px 0px;
+  width: 40px;
+  height: 40px;
+}
+.cervices-product__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
+.cervices-product__label {
+  flex: 0 0 30px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.33;
+  color: #999;
+  text-align: center;
+}
+
 .page {
   flex: 1 1 auto;
   padding: 75px 0px 0px 0px;
