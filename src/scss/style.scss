@@ -87,6 +87,7 @@ body {
 @import "footer";
 @import "home";
 @import "catalog";
+@import "product";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>=================================
 
 //<ОСНОВНОЙ БЛОК>=================================
@@ -106,6 +107,7 @@ body {
 		flex: 0 0 260px;
 		position: relative;
 		z-index: 9;
+		margin: 0px 0px 20px 0px;
 	}
 	// .page__menu
 	&__menu {
