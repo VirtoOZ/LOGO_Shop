@@ -95,7 +95,7 @@
 	&__subimage {
 		transition: all 0.5s ease 0s;
 		border: 1px solid #e4e4e4;
-		height: 68px;
+		padding: 0px 0px 82% 0px;
 		&::after {
 			transition: all 0.5s ease 0s;
 			content: "";
@@ -173,6 +173,8 @@
 	// .actions-product__column
 	&__column {
 		padding: 0px 8px;
+		margin: 0px 0px 10px 0px;
+
 		@media (max-width: ($md1+px)) {
 			&:last-child {
 				flex: 1 1 auto;
@@ -184,9 +186,10 @@
 				flex: none;
 			}
 		}
+
 		@media (max-width: ($md3+px)) {
 			&:last-child {
-				flex: 1 1 auto;
+				flex: 1 1 100%;
 			}
 		}
 	}
@@ -244,8 +247,6 @@
 			right: 0;
 			background: url("../img/icons/popular/card-orange.webp") right no-repeat;
 		}
-		@media (min-width: ($md3+px)) {
-		}
 	}
 }
 //======================================================================
@@ -264,13 +265,13 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		margin: 0px -35px;
+		// margin: 0px -35px;
 	}
 
 	// .cervices-product__column
 	&__column {
-		padding: 0px 35px;
-		flex: 0 1 80px;
+		max-width: 100px;
+		flex: 0 1 33.333%;
 	}
 	// .cervices-product__item
 	&__item {
