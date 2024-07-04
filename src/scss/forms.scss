@@ -331,8 +331,8 @@ textarea.input {
 
 //</QUANTITY>======================================================================
 .quantity {
-	width: 120px;
-	height: 33px;
+	width: 110px;
+	height: 30px;
 	display: flex;
 	align-items: center;
 	// .quantity__button
@@ -340,25 +340,31 @@ textarea.input {
 		flex: 0 0 20px;
 		position: relative;
 		cursor: pointer;
-		transition: all 0.3s ease 0s;
+		// transition: all 0.3s ease 0s;
 		background: url("../img/icons/catalog/cat_arrow_gray.png") 0 0/100% no-repeat;
 		width: 20px;
 		height: 17px;
 		@media (min-width: ($md2+px)) {
 			&:hover {
 				background: url("../img/icons/catalog/cat_arrow_orange.png") 0 0/100% no-repeat;
-
-				// transform: rotate(-180deg);
+				// .quantity__button_plus
 			}
 		}
 		// .quantity__button_plus
 		&_plus {
 			transform: rotate(-180deg);
+			@media (min-width: ($md2+px)) {
+				&:hover {
+					transform: rotate(0deg);
+				}
+			}
 		}
 		// .quantity__button_minus
 		&_minus {
-			&::before {
-				// transform: rotate(-180deg);
+			@media (min-width: ($md2+px)) {
+				&:hover {
+					transform: rotate(-180deg);
+				}
 			}
 		}
 	}

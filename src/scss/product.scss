@@ -15,17 +15,28 @@
 	}
 	// .product__content
 	&__content {
-		display: flex;
+		@media (min-width: 700px) {
+			display: flex;
+		}
 	}
+
 	// .product__images
 	&__images {
-		flex: 0 0 42.5%;
+		flex: 0 0 360px;
 		min-width: 0%;
+		@media (max-width: ($md1+px)) {
+			flex: 0 0 300px;
+		}
+		@media (max-width: 700px) {
+			margin: 0px 0px 30px 0px;
+		}
 	}
 	// .product__body
 	&__body {
 		flex: 1 1 auto;
-		margin: 0px 0px 0px 30px;
+		@media (min-width: 700px) {
+			margin: 0px 0px 0px 30px;
+		}
 	}
 }
 //======================================================================
@@ -152,17 +163,36 @@
 	// .actions-product__row
 	&__row {
 		display: flex;
-		// justify-content: space-between;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		align-items: center;
-		margin: 0px -10px;
+		margin: 0px -8px;
+		@media (max-width: 700px) {
+		}
 	}
 	// .actions-product__column
 	&__column {
-		padding: 0px 10px;
-		flex: 1 1 auto;
+		padding: 0px 8px;
+		@media (max-width: ($md1+px)) {
+			&:last-child {
+				flex: 1 1 auto;
+				flex-wrap: wrap;
+			}
+		}
+		@media (max-width: ($md2+px)) {
+			&:last-child {
+				flex: none;
+			}
+		}
+		@media (max-width: ($md3+px)) {
+			&:last-child {
+				flex: 1 1 auto;
+			}
+		}
 	}
 	// .actions-product__price
 	&__price {
+		white-space: nowrap;
 		font-size: 24px;
 		color: #333333;
 		font-weight: 900;
@@ -186,9 +216,11 @@
 	}
 	// .actions-product__cart
 	&__cart {
+		white-space: nowrap;
 		position: relative;
 		height: 57px;
 		display: flex;
+		// justify-content: space-between;
 		align-items: center;
 		padding: 0px 45px 0px 0px;
 		span {
@@ -197,10 +229,11 @@
 			align-items: center;
 			height: 34px;
 			background-color: #f3f3f3;
-			padding: 0px 15px;
+			padding: 0px 10px;
 			text-transform: uppercase;
 			font-weight: 900;
 			color: #999;
+			flex: 1 1 100%;
 		}
 		&::after {
 			content: "";
@@ -211,21 +244,8 @@
 			right: 0;
 			background: url("../img/icons/popular/card-orange.webp") right no-repeat;
 		}
-	}
-}
-//======================================================================
-.quantity {
-	// .quantity__button
-	&__button {
-		// .quantity__button_minus
-		&_minus {
+		@media (min-width: ($md3+px)) {
 		}
-		// .quantity__button_plus
-		&_plus {
-		}
-	}
-	// .quantity__input
-	&__input {
 	}
 }
 //======================================================================
@@ -285,3 +305,4 @@
 		text-align: center;
 	}
 }
+//======================================================================
