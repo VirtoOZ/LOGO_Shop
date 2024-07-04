@@ -1289,8 +1289,8 @@ textarea.input {
 }
 
 .quantity {
-  width: 120px;
-  height: 33px;
+  width: 110px;
+  height: 30px;
   display: flex;
   align-items: center;
 }
@@ -1298,7 +1298,6 @@ textarea.input {
   flex: 0 0 20px;
   position: relative;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
   background: url("../img/icons/catalog/cat_arrow_gray.png") 0 0/100% no-repeat;
   width: 20px;
   height: 17px;
@@ -1310,6 +1309,16 @@ textarea.input {
 }
 .quantity__button_plus {
   transform: rotate(-180deg);
+}
+@media (min-width: 992px) {
+  .quantity__button_plus:hover {
+    transform: rotate(0deg);
+  }
+}
+@media (min-width: 992px) {
+  .quantity__button_minus:hover {
+    transform: rotate(-180deg);
+  }
 }
 .quantity__input {
   flex: 1 1 auto;
@@ -2950,16 +2959,32 @@ ol.counter li::before {
   font-size: 30px;
   color: #dadada;
 }
-.product__content {
-  display: flex;
+@media (min-width: 700px) {
+  .product__content {
+    display: flex;
+  }
 }
 .product__images {
-  flex: 0 0 42.5%;
+  flex: 0 0 360px;
   min-width: 0%;
+}
+@media (max-width: 1192px) {
+  .product__images {
+    flex: 0 0 300px;
+  }
+}
+@media (max-width: 700px) {
+  .product__images {
+    margin: 0px 0px 30px 0px;
+  }
 }
 .product__body {
   flex: 1 1 auto;
-  margin: 0px 0px 0px 30px;
+}
+@media (min-width: 700px) {
+  .product__body {
+    margin: 0px 0px 0px 30px;
+  }
 }
 
 .images-product__mainslider {
@@ -3061,14 +3086,32 @@ ol.counter li::before {
 }
 .actions-product__row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  margin: 0px -10px;
+  margin: 0px -8px;
 }
 .actions-product__column {
-  padding: 0px 10px;
-  flex: 1 1 auto;
+  padding: 0px 8px;
+}
+@media (max-width: 1192px) {
+  .actions-product__column:last-child {
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 992px) {
+  .actions-product__column:last-child {
+    flex: none;
+  }
+}
+@media (max-width: 768px) {
+  .actions-product__column:last-child {
+    flex: 1 1 auto;
+  }
 }
 .actions-product__price {
+  white-space: nowrap;
   font-size: 24px;
   color: #333333;
   font-weight: 900;
@@ -3087,6 +3130,7 @@ ol.counter li::before {
   font-size: 16px;
 }
 .actions-product__cart {
+  white-space: nowrap;
   position: relative;
   height: 57px;
   display: flex;
@@ -3099,10 +3143,11 @@ ol.counter li::before {
   align-items: center;
   height: 34px;
   background-color: #f3f3f3;
-  padding: 0px 15px;
+  padding: 0px 10px;
   text-transform: uppercase;
   font-weight: 900;
   color: #999;
+  flex: 1 1 100%;
 }
 .actions-product__cart::after {
   content: "";
@@ -3113,7 +3158,6 @@ ol.counter li::before {
   right: 0;
   background: url("../img/icons/popular/card-orange.webp") right no-repeat;
 }
-
 .cervices-product__title {
   height: 10px;
   font-size: 14px;
