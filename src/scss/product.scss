@@ -15,6 +15,7 @@
 	}
 	// .product__content
 	&__content {
+		margin: 0px 0px 35px 0px;
 		@media (min-width: 700px) {
 			display: flex;
 		}
@@ -37,6 +38,16 @@
 		@media (min-width: 700px) {
 			margin: 0px 0px 0px 30px;
 		}
+	}
+	// .product__info
+	&__info {
+		margin: 0px 0px 50px 0px;
+		@media (max-width: ($md3+px)) {
+			margin: 0px -10px 30px -10px;
+		}
+	}
+	// .products__same
+	&__same {
 	}
 }
 //======================================================================
@@ -308,3 +319,93 @@
 	}
 }
 //======================================================================
+.info-product {
+	// .info-product__nav
+	&__nav {
+		display: flex;
+		align-items: center;
+	}
+	// .info-product__item
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 49px;
+		padding: 0px 30px;
+		font-size: 14px;
+		font-weight: 900;
+		line-height: 1.14;
+		color: #72c9d4;
+		text-transform: uppercase;
+		span {
+			border-bottom: 1px dotted #72c9d4;
+		}
+		&._active {
+			background-color: #72c9d4;
+			color: #fff;
+			span {
+				border-bottom: 1px dotted transparent;
+			}
+		}
+		@media (max-width: ($md3+px)) {
+			flex: 1 1 auto;
+			padding: 0px 15px;
+			font-size: 14px;
+		}
+	}
+	// .info-product__body
+	&__body {
+		padding: 35px 30px;
+		background-color: #fafafa;
+		@media (max-width: ($md3+px)) {
+			padding: 25px 15px;
+		}
+	}
+	// .info-product__block
+	&__block {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 22px;
+		text-align: left;
+		color: #666;
+		p {
+			margin: 0px 0px 20px 0px;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+		// .info-product__table
+		&__table {
+			border-collapse: collapse;
+			width: 100%;
+			tr {
+				border-bottom: 1px solid #e2e2e2;
+			}
+			td {
+				padding: 15px 0px;
+				color: #333;
+				width: 50%;
+			}
+		}
+		// .info-product__label
+		&__label {
+		}
+		// .info-product__value
+		&__value {
+		}
+	}
+}
+//======================================================================
+.same-products {
+	// .same-products__title
+	&__title {
+		text-transform: uppercase;
+		font-weight: 900;
+		margin: 0px 0px 30px 0px;
+		color: #dadada;
+		font-size: 30px;
+	}
+	// .same-products__items
+	&__items {
+	}
+}

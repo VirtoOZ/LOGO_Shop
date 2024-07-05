@@ -2959,6 +2959,9 @@ ol.counter li::before {
   font-size: 30px;
   color: #dadada;
 }
+.product__content {
+  margin: 0px 0px 35px 0px;
+}
 @media (min-width: 700px) {
   .product__content {
     display: flex;
@@ -2986,7 +2989,14 @@ ol.counter li::before {
     margin: 0px 0px 0px 30px;
   }
 }
-
+.product__info {
+  margin: 0px 0px 50px 0px;
+}
+@media (max-width: 768px) {
+  .product__info {
+    margin: 0px -10px 30px -10px;
+  }
+}
 .images-product__mainslider {
   margin: 0px 0px 15px 0px;
   border: 1px solid #e4e4e4;
@@ -3211,6 +3221,80 @@ ol.counter li::before {
   text-align: center;
 }
 
+.info-product__nav {
+  display: flex;
+  align-items: center;
+}
+.info-product__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 49px;
+  padding: 0px 30px;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.14;
+  color: #72c9d4;
+  text-transform: uppercase;
+}
+.info-product__item span {
+  border-bottom: 1px dotted #72c9d4;
+}
+.info-product__item._active {
+  background-color: #72c9d4;
+  color: #fff;
+}
+.info-product__item._active span {
+  border-bottom: 1px dotted transparent;
+}
+@media (max-width: 768px) {
+  .info-product__item {
+    flex: 1 1 auto;
+    padding: 0px 15px;
+    font-size: 14px;
+  }
+}
+.info-product__body {
+  padding: 35px 30px;
+  background-color: #fafafa;
+}
+@media (max-width: 768px) {
+  .info-product__body {
+    padding: 25px 15px;
+  }
+}
+.info-product__block {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: left;
+  color: #666;
+}
+.info-product__block p {
+  margin: 0px 0px 20px 0px;
+}
+.info-product__block p:last-child {
+  margin: 0px 0px 0px 0px;
+}
+.info-product__block__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.info-product__block__table tr {
+  border-bottom: 1px solid #e2e2e2;
+}
+.info-product__block__table td {
+  padding: 15px 0px;
+  color: #333;
+  width: 50%;
+}
+.same-products__title {
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0px 0px 30px 0px;
+  color: #dadada;
+  font-size: 30px;
+}
 .page {
   flex: 1 1 auto;
   padding: 75px 0px 0px 0px;
