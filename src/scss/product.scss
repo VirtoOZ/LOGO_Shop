@@ -128,6 +128,9 @@
 		align-items: center;
 		justify-content: space-between;
 		margin: 0px 0px 12px 0px;
+		@media (max-width: 700px) {
+			justify-content: space-around;
+		}
 	}
 	// .body-product__compare
 	&__compare {
@@ -180,6 +183,7 @@
 		align-items: center;
 		margin: 0px -8px;
 		@media (max-width: 700px) {
+			justify-content: space-around;
 		}
 	}
 	// .actions-product__column
@@ -235,9 +239,8 @@
 		position: relative;
 		height: 57px;
 		display: flex;
-		// justify-content: space-between;
 		align-items: center;
-		padding: 0px 45px 0px 0px;
+		padding: 0px 50px 0px 0px;
 		span {
 			display: flex;
 			justify-content: center;
@@ -249,6 +252,8 @@
 			font-weight: 900;
 			color: #999;
 			flex: 1 1 100%;
+			@media (max-width: 700px) {
+			}
 		}
 		&::after {
 			content: "";
@@ -271,6 +276,9 @@
 		color: #333;
 		text-transform: uppercase;
 		margin: 0px 0px 25px 0px;
+		@media (max-width: 700px) {
+			text-align: center;
+		}
 	}
 	// .cervices-product__body
 	&__body {
@@ -278,6 +286,9 @@
 		justify-content: flex-start;
 		align-items: center;
 		// margin: 0px -35px;
+		@media (max-width: 700px) {
+			justify-content: space-around;
+		}
 	}
 
 	// .cervices-product__column
