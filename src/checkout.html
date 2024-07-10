@@ -397,7 +397,7 @@
 							<li><span class="breadcrumbs__item">Оформление</span></li>
 						</ul>
 					</nav>
-					<div class="checkout">
+					<form action="#" class="checkout">
 						<div class="checkout__title title-checkout">Оформление заказа</div>
 						<div class="checkout__content content-checkout _tabs">
 							<nav class="content-checkout__nav">
@@ -406,7 +406,66 @@
 								<div class="content-checkout__item _tabs-item"><span>Доставка в регионы</span></div>
 							</nav>
 							<div class="content-checkout__body">
-								<div class="content-checkout__block _tabs-block _active"></div>
+								<div class="content-checkout__block _tabs-block _active">
+									<div class="content-checkout__form form-checkout">
+										<div class="form-checkout__column">
+											<div class="form-checkout__line">
+												<div class="form-checkout__label">
+													Имя:&nbsp; <span>*</span>
+												</div>
+												<div class="form-checkout__input">
+													<input autocomplete="off" type="text" name="form[]" data-value=""
+														class="input _req">
+												</div>
+											</div>
+											<div class="form-checkout__line">
+												<div class="form-checkout__label">
+													Моб. телефон:&nbsp; <span>*</span>
+												</div>
+												<div class="form-checkout__input">
+													<input autocomplete="off" type="text" name="form[]" data-value=""
+														class="input _req">
+												</div>
+											</div>
+											<div class="form-checkout__line">
+												<div class="form-checkout__label">
+													Ваш E-mail:
+												</div>
+												<div class="form-checkout__input">
+													<input autocomplete="off" type="text" name="form[]" data-value=""
+														class="input _req">
+												</div>
+											</div>
+											<div class="form-checkout__line">
+												<div class="form-checkout__label">
+												</div>
+												<div class="form-checkout__input">
+													<label class="checkbox">
+														<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+															name="form[]">
+														<span class="checkbox__text"><span>Подписаться на новости и
+																скидки</span></span>
+													</label>
+												</div>
+
+											</div>
+										</div>
+										<div class="form-checkout__column">
+											<div class="form-checkout__text">
+												<p><span>*</span> Поля, обязательные для заполнения</p>
+												<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, id!
+													Voluptas ipsam quaerat officia, exercitationem esse eos iusto alias laboriosam
+													dolores quasi earum libero officiis provident expedita voluptatum nihil quas!
+												</p>
+												<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, id!
+													Voluptas ipsam quaerat officia, exercitationem esse eos iusto alias laboriosam
+													dolores quasi earum libero officiis provident expedita voluptatum nihil quas!
+												</p>
+											</div>
+
+										</div>
+									</div>
+								</div>
 								<div class="content-checkout__block _tabs-block"></div>
 								<div class="content-checkout__block _tabs-block"></div>
 							</div>
@@ -494,10 +553,10 @@
 								<div class="order-checkout__total">
 									Итого: <span class="rub">120 000</span>
 								</div>
-								<a href="" class="order-checkout__btn">Оформить заказ</a>
+								<button type="submit" class="order-checkout__btn btn">Оформить заказ</button>
 							</div>
 						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 			<div class="page__info-menu info-menu">

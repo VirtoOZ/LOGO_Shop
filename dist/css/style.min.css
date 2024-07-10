@@ -1257,6 +1257,19 @@ textarea.input {
   background: #fff;
   border: 1px solid #a7a9ac;
 }
+.options__input:before {
+  content: "";
+  align-self: flex-start;
+  margin: 0px 14px 0px 0px;
+  flex: 0 0 20px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 18px;
+  background: #fff;
+  border: 1px solid #a7a9ac;
+}
 .options__input:after {
   content: "";
   transition: all 0.3s ease 0s;
@@ -1267,9 +1280,23 @@ textarea.input {
   background-color: #77243a;
   position: absolute;
   left: 5px;
+  top: 4px;
 }
 
-.star {
+.rating-block {
+  display: table;
+  font-size: 0;
+}
+
+.rating {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.rating.edit .star {
+  cursor: pointer;
+}
+.rating .star {
   width: 17px;
   height: 14px;
   display: inline-block;
@@ -1286,6 +1313,25 @@ textarea.input {
   background: url("../img/icons/bg_rating.svg") 0 0 no-repeat;
   z-index: 1;
   background-size: 85px 100%;
+}
+
+.rating__activeline {
+  position: absolute;
+  width: 0;
+  height: 14px;
+  top: 0;
+  left: 0;
+  background: url("../img/icons/") 0 0 no-repeat;
+  z-index: 2;
+  background-size: 85px 100%;
+}
+
+.rating__value {
+  display: inline-block;
+  color: #1b3139;
+  font-size: 14px;
+  line-height: 13px;
+  vertical-align: middle;
 }
 
 .quantity {
@@ -3247,6 +3293,7 @@ ol.counter li::before {
 }
 .info-product__item {
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   height: 49px;
@@ -3324,6 +3371,14 @@ ol.counter li::before {
 
 .checkout__title {
   margin: 0px 0px 15px 0px;
+}
+.checkout__content {
+  margin: 0px 0px 45px 0px;
+}
+@media (max-width: 768px) {
+  .checkout__content {
+    margin: 0px -10px 25px;
+  }
 }
 .order-checkout__title {
   margin: 0px 0px 15px 0px;
@@ -3422,6 +3477,124 @@ ol.counter li::before {
 @media (min-width: 992px) {
   .item-order__delete:hover {
     background: url("../img/icons/catalog/x_hover.png") left no-repeat;
+  }
+}
+
+.content-checkout {
+  padding: 20px;
+  background-color: #fafafa;
+}
+@media (min-width: 1192px) {
+  .content-checkout {
+    padding: 20px 45px;
+  }
+}
+@media (min-width: 1192px) {
+  .content-checkout__nav {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .content-checkout__nav {
+    margin: -20px -20px 0px -20px;
+  }
+}
+.content-checkout__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 49px;
+  padding: 0px 30px;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.14;
+  color: #72c9d4;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.content-checkout__item span {
+  border-bottom: 1px dotted #72c9d4;
+}
+.content-checkout__item._active {
+  background-color: #72c9d4;
+  color: #fff;
+}
+.content-checkout__item._active span {
+  border-bottom: 1px dotted transparent;
+}
+@media (max-width: 768px) {
+  .content-checkout__item {
+    flex: 1 1 auto;
+    padding: 0px 15px;
+    font-size: 14px;
+  }
+}
+.content-checkout__body {
+  padding: 30px 0px 0px 0px;
+}
+@media (min-width: 1192px) {
+  .form-checkout {
+    display: flex;
+    margin: 0px -15px;
+  }
+}
+@media (min-width: 1192px) {
+  .form-checkout__column {
+    flex: 0 1 50%;
+    padding: 0px 15px;
+  }
+}
+.form-checkout__line {
+  align-items: center;
+  margin: 0px 0px 10px 0px;
+}
+.form-checkout__line:last-child {
+  margin: 0px 0px 0px 0px;
+}
+@media (min-width: 768px) {
+  .form-checkout__line {
+    display: flex;
+  }
+}
+.form-checkout__label {
+  flex: 0 0 115px;
+  color: #333;
+  font-weight: 900;
+}
+.form-checkout__label span {
+  color: #f68038;
+}
+@media (max-width: 768px) {
+  .form-checkout__label {
+    margin: 0px 0px 10px 0px;
+  }
+}
+.form-checkout__input {
+  flex: 1 1 auto;
+}
+@media (min-width: 768px) {
+  .form-checkout__input {
+    padding: 0px 0px 0px 15px;
+  }
+}
+.form-checkout__text {
+  color: #666;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+}
+.form-checkout__text span {
+  color: #f68038;
+}
+.form-checkout__text p {
+  margin: 0px 0px 20px 0px;
+}
+.form-checkout__text p:last-child {
+  margin: 0px 0px 0px 0px;
+}
+@media (max-width: 1192px) {
+  .form-checkout__text {
+    padding: 20px 0px 0px 0px;
   }
 }
 

@@ -293,6 +293,19 @@ textarea.input {
 			background: #fff;
 			border: 1px solid #a7a9ac;
 		}
+		&:before {
+			content: "";
+			align-self: flex-start;
+			margin: 0px 14px 0px 0px;
+			flex: 0 0 20px;
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+			width: 20px;
+			height: 18px;
+			background: #fff;
+			border: 1px solid#a7a9ac;
+		}
 		&:after {
 			content: "";
 			transition: all 0.3s ease 0s;
@@ -303,17 +316,30 @@ textarea.input {
 			background-color: #77243a;
 			position: absolute;
 			left: 5px;
+			top: 4px;
 		}
 	}
 }
 //</OPTIONS>======================================================================
 //<RATING>======================================================================
-.star {
-	width: 17px;
-	height: 14px;
+.rating-block {
+	display: table;
+	font-size: 0;
+}
+.rating {
 	display: inline-block;
 	position: relative;
-	z-index: 3;
+	vertical-align: middle;
+	&.edit .star {
+		cursor: pointer;
+	}
+	.star {
+		width: 17px;
+		height: 14px;
+		display: inline-block;
+		position: relative;
+		z-index: 3;
+	}
 }
 .rating__line {
 	position: absolute;
@@ -326,7 +352,23 @@ textarea.input {
 	background-size: 85px 100%;
 }
 .rating__activeline {
+	position: absolute;
+	width: 0;
+	height: 14px;
+	top: 0;
+	left: 0;
+	background: url("../img/icons/") 0 0 no-repeat;
+	z-index: 2;
+	background-size: 85px 100%;
 }
+.rating__value {
+	display: inline-block;
+	color: #1b3139;
+	font-size: 14px;
+	line-height: 13px;
+	vertical-align: middle;
+}
+
 //</RATING>======================================================================
 
 //</QUANTITY>======================================================================

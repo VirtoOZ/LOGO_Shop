@@ -11,6 +11,10 @@
 	}
 	// .checkout__content
 	&__content {
+		margin: 0px 0px 45px 0px;
+		@media (max-width: ($md3+px)) {
+			margin: 0px -10px 25px;
+		}
 	}
 	// .checkout__order
 	&__order {
@@ -133,6 +137,130 @@
 			&:hover {
 				background: url("../img/icons/catalog/x_hover.png") left no-repeat;
 			}
+		}
+	}
+}
+//======================================================================
+
+.title-checkout {
+}
+.content-checkout {
+	padding: 20px;
+	background-color: #fafafa;
+	@media (min-width: ($md1+px)) {
+		padding: 20px 45px;
+	}
+
+	// .content-checkout__nav
+	&__nav {
+		@media (min-width: ($md1+px)) {
+			display: flex;
+		}
+		@media (max-width: ($md3+px)) {
+			margin: -20px -20px 0px -20px;
+		}
+	}
+	// .content-checkout__item
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 49px;
+		padding: 0px 30px;
+		font-size: 14px;
+		font-weight: 900;
+		line-height: 1.14;
+		color: #72c9d4;
+		text-transform: uppercase;
+		cursor: pointer;
+		span {
+			border-bottom: 1px dotted #72c9d4;
+		}
+		&._active {
+			background-color: #72c9d4;
+			color: #fff;
+			span {
+				border-bottom: 1px dotted transparent;
+			}
+		}
+		@media (max-width: ($md3+px)) {
+			flex: 1 1 auto;
+			padding: 0px 15px;
+			font-size: 14px;
+		}
+	}
+	// .content-checkout__body
+	&__body {
+		padding: 30px 0px 0px 0px;
+	}
+	// .content-checkout__block
+	&__block {
+	}
+	// .content-checkout__form
+	&__form {
+	}
+}
+//======================================================================
+.form-checkout {
+	@media (min-width: ($md1+px)) {
+		display: flex;
+		margin: 0px -15px;
+	}
+	// .form-checkout__column
+	@media (min-width: ($md1+px)) {
+		&__column {
+			flex: 0 1 50%;
+			padding: 0px 15px;
+		}
+	}
+	// .form-checkout__line
+	&__line {
+		align-items: center;
+		margin: 0px 0px 10px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+		@media (min-width: ($md3+px)) {
+			display: flex;
+		}
+	}
+	// .form-checkout__label
+	&__label {
+		flex: 0 0 115px;
+		color: #333;
+		font-weight: 900;
+		span {
+			color: #f68038;
+		}
+		@media (max-width: ($md3+px)) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	// .form-checkout__input
+	&__input {
+		flex: 1 1 auto;
+
+		@media (min-width: ($md3+px)) {
+			padding: 0px 0px 0px 15px;
+		}
+	}
+	// .form-checkout__text
+	&__text {
+		color: #666;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 18px;
+		span {
+			color: #f68038;
+		}
+		p {
+			margin: 0px 0px 20px 0px;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+		@media (max-width: ($md1+px)) {
+			padding: 20px 0px 0px 0px;
 		}
 	}
 }
