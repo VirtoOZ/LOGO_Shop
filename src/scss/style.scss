@@ -814,7 +814,6 @@ body {
 	background-color: #fff;
 	display: none;
 	border: 1px solid #f3f3f3;
-
 	&::after {
 		content: "";
 		background-color: #f68038;
@@ -864,6 +863,9 @@ body {
 	&__checkbox {
 		.checkbox__text {
 			color: #999;
+			&::after {
+				display: none;
+			}
 			&::before {
 				display: none;
 			}
@@ -894,12 +896,16 @@ body {
 .news-side {
 	background-color: #fff;
 	border-radius: 5px;
-
 	// .news-side__title
 	&__title {
 		display: inline-block;
-		// отновительный отступ вниз
+		// отноcительный отступ вниз
 		margin: 0px 0px calc(25px / 30px * 1em) 0px;
+		@media (max-width: 640px) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	// .news-side__items
 	&__items {
@@ -961,11 +967,15 @@ body {
 	// .reviews-side__title
 	background-color: #fff;
 	border-radius: 5px;
-
 	&__title {
 		display: inline-block;
 		// отновительный отступ вниз
 		margin: 0px 0px calc(20px / 30px * 1em) 0px;
+		@media (max-width: 640px) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	// .reviews-side__items
 	&__items {

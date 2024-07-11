@@ -179,7 +179,7 @@ textarea {
 }
 .input {
 	border-radius: 0 !important;
-	border: 1px solid #dadada;
+	border: 1px solid #e5e5e5;
 	width: 100%;
 	height: 30px;
 	display: block;
@@ -187,6 +187,7 @@ textarea {
 	&._focus {
 	}
 	&._error {
+		border: 1px solid red;
 	}
 }
 textarea.input {
@@ -201,8 +202,8 @@ textarea.input {
 	// .checkbox__input
 	&__input {
 		position: absolute;
-		width: 0%;
-		height: 0%;
+		width: 0;
+		height: 0;
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .checkbox__text::before {
@@ -225,7 +226,6 @@ textarea.input {
 		position: relative;
 		font-size: 12px;
 		color: #666;
-		// letter-spacing: -0.3;
 		line-height: calc(15 / 12 * 100%);
 		cursor: pointer;
 		&::before {
@@ -250,8 +250,7 @@ textarea.input {
 			}
 		}
 	}
-	//.checkbox__error
-	&__error {
+	&._error {
 		.checkbox__text {
 			&::before {
 				border: 1px solid #ee1212;
@@ -284,15 +283,18 @@ textarea.input {
 		&:checked + .options__text:before {
 		}
 		&:checked + .options__text:after {
-			flex: 0 0 20px;
-			left: 0;
-			top: 0;
-			border-radius: 50%;
-			width: 20px;
-			height: 18px;
-			background: #fff;
-			border: 1px solid #a7a9ac;
+			transform: scale(1);
 		}
+	}
+	// .options__text
+	&__text {
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		font-size: 16px;
+		color: #ffffff;
+		letter-spacing: -0.3px;
+		line-height: calc(20 / 16);
 		&:before {
 			content: "";
 			align-self: flex-start;
