@@ -2018,6 +2018,7 @@ ol.counter li::before {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0px -1.5939597315vw;
 }
 @media (max-width: 640px) {
   .column-left__actions {
@@ -2025,6 +2026,7 @@ ol.counter li::before {
     justify-content: space-around;
   }
 }
+
 .actions__column {
   min-height: 24px;
   padding: 0 calc(5px + 14 * (100vw - 320px) / 872);
@@ -2054,6 +2056,12 @@ ol.counter li::before {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: 0px -1.2583892617vw;
+}
+@media (max-width: 1192px) {
+  .column-right__info {
+    margin: 0px -0.8389261745vw;
+  }
 }
 @media (max-width: 640px) {
   .column-right__info {
@@ -2063,7 +2071,7 @@ ol.counter li::before {
 }
 
 .info__column {
-  padding: 0px 1.5939597315vw;
+  padding: 0px 1.2583892617vw;
   min-height: 24px;
 }
 @media (max-width: 1192px) {
